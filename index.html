@@ -310,7 +310,7 @@
         #0e141e;
     }
 
-    .contact-box p {
+    .contact-box > p {
       max-width: 760px;
 
       margin-top: 12px;
@@ -318,8 +318,49 @@
       color: #aab4c3;
     }
 
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .contact-person {
+      padding: 26px;
+
+      border: 1px solid #283445;
+      border-radius: 12px;
+
+      background: #0b111a;
+    }
+
+    .contact-person h3 {
+      margin-bottom: 6px;
+      font-size: 21px;
+    }
+
+    .contact-role {
+      margin-bottom: 18px;
+      color: #8e9aad;
+      font-size: 14px;
+    }
+
+    .contact-person a {
+      display: block;
+      margin-top: 10px;
+
+      color: #6ea8ff;
+      text-decoration: none;
+
+      word-break: break-word;
+    }
+
+    .contact-person a:hover {
+      text-decoration: underline;
+    }
+
     .contact-box .buttons {
-      margin-top: 26px;
+      margin-top: 30px;
     }
 
     footer {
@@ -670,13 +711,68 @@
 
     <div class="contact-box">
 
-      <h2>Experience TorqPro AI</h2>
+      <h2>Contact</h2>
 
       <p>
-        Explore the live TorqPro AI engineering platform and its
-        fastener engineering, torque recommendation, validation,
-        traceability and technical knowledge capabilities.
+        For TorqPro AI product information, engineering collaboration,
+        demonstrations or partnership opportunities, please contact us.
       </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-person">
+
+          <h3>İlhan ÇEKİÇ</h3>
+
+          <div class="contact-role">
+            Engineering & Product
+          </div>
+
+          <a href="mailto:cekic.ilhan@gmail.com">
+            cekic.ilhan@gmail.com
+          </a>
+
+          <a href="tel:+905495967940">
+            +90 549 596 79 40
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ilhan-cekic-212b4a4a/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+        <div class="contact-person">
+
+          <h3>Koray Tokol</h3>
+
+          <div class="contact-role">
+            Business & Technology
+          </div>
+
+          <a href="mailto:koray.tokol@outlook.com">
+            koray.tokol@outlook.com
+          </a>
+
+          <a href="tel:+905414421934">
+            +90 541 442 19 34
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/koray-tokol/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+        </div>
+
+      </div>
 
       <div class="buttons">
 
