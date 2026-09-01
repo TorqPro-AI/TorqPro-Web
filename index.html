@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>TorqPro AI | Fastener Engineering Platform</title>
+
+  <meta
+    name="description"
+    content="TorqPro AI is a fastener engineering platform for deterministic torque recommendation, VDI 2230 analysis, validation, traceability and AI-assisted engineering."
+  >
 
   <style>
     * {
@@ -12,83 +18,128 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #090d14;
+      background:
+        radial-gradient(circle at top right, rgba(30, 90, 180, 0.10), transparent 30%),
+        #090d14;
       color: #f4f7fb;
       line-height: 1.6;
     }
 
+    a {
+      color: inherit;
+    }
+
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 8%;
+
+      padding: 20px 8%;
+
       border-bottom: 1px solid #202938;
-      position: sticky;
-      top: 0;
-      background: rgba(9, 13, 20, 0.95);
+      background: rgba(9, 13, 20, 0.94);
+      backdrop-filter: blur(12px);
     }
 
     .logo {
       font-size: 24px;
       font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
     .logo span {
-      opacity: 0.7;
+      opacity: 0.65;
+      font-weight: 500;
+    }
+
+    nav .links {
+      display: flex;
+      align-items: center;
     }
 
     nav a {
+      margin-left: 28px;
       color: #d8dee9;
       text-decoration: none;
-      margin-left: 28px;
       font-size: 14px;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
     }
 
     .hero {
-      min-height: 72vh;
+      min-height: 78vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 80px 8%;
-      max-width: 1200px;
+
+      max-width: 1250px;
+      padding: 100px 8% 80px;
     }
 
     .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
-      opacity: 0.65;
       margin-bottom: 18px;
+
+      color: #8795aa;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     h1 {
+      max-width: 1000px;
+
       font-size: clamp(48px, 7vw, 86px);
-      line-height: 1.05;
-      max-width: 950px;
+      line-height: 1.03;
+      letter-spacing: -2px;
     }
 
     .hero p {
-      font-size: 21px;
-      max-width: 760px;
+      max-width: 820px;
       margin-top: 28px;
+
       color: #adb7c6;
+      font-size: 21px;
     }
 
     .buttons {
-      margin-top: 36px;
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 14px;
+
+      margin-top: 36px;
     }
 
     .button {
       display: inline-block;
+
       padding: 13px 22px;
+
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      opacity: 0.9;
     }
 
     .primary {
@@ -102,20 +153,24 @@
     }
 
     section {
-      padding: 80px 8%;
       max-width: 1300px;
       margin: auto;
+      padding: 90px 8%;
     }
 
     section h2 {
-      font-size: 38px;
       margin-bottom: 14px;
+
+      font-size: clamp(32px, 4vw, 44px);
+      letter-spacing: -1px;
     }
 
     .section-intro {
-      max-width: 730px;
-      color: #aab4c3;
+      max-width: 790px;
       margin-bottom: 38px;
+
+      color: #aab4c3;
+      font-size: 17px;
     }
 
     .grid {
@@ -125,10 +180,18 @@
     }
 
     .card {
-      border: 1px solid #242d3b;
-      border-radius: 12px;
       padding: 28px;
-      background: #0e141e;
+
+      border: 1px solid #242d3b;
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.015),
+          rgba(255, 255, 255, 0)
+        ),
+        #0e141e;
     }
 
     .card h3 {
@@ -142,32 +205,158 @@
     }
 
     .principle {
+      max-width: 900px;
       margin-top: 45px;
+      padding: 20px 24px;
+
       border-left: 3px solid #cbd3df;
-      padding: 18px 24px;
+
+      background: rgba(255, 255, 255, 0.015);
+
       color: #c3cbd6;
-      max-width: 850px;
+      font-size: 17px;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .preview-card {
+      overflow: hidden;
+
+      border: 1px solid #242d3b;
+      border-radius: 16px;
+
+      background: #0e141e;
+    }
+
+    .preview-copy {
+      padding: 24px 26px 18px;
+    }
+
+    .preview-copy h3 {
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .preview-copy p {
+      color: #9ea9b8;
+      font-size: 15px;
+    }
+
+    .preview-card img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-top: 1px solid #242d3b;
+
+      background: transparent;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+
+      margin-top: 35px;
+    }
+
+    .trust-item {
+      padding: 18px 20px;
+
+      border: 1px solid #242d3b;
+      border-radius: 10px;
+
+      background: #0e141e;
+    }
+
+    .trust-item strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #f4f7fb;
+      font-size: 15px;
+    }
+
+    .trust-item span {
+      color: #8e9aad;
+      font-size: 13px;
+    }
+
+    .contact-box {
+      padding: 42px;
+
+      border: 1px solid #283445;
+      border-radius: 16px;
+
+      background:
+        radial-gradient(circle at top right, rgba(40, 110, 220, 0.12), transparent 35%),
+        #0e141e;
+    }
+
+    .contact-box p {
+      max-width: 760px;
+
+      margin-top: 12px;
+
+      color: #aab4c3;
+    }
+
+    .contact-box .buttons {
+      margin-top: 26px;
     }
 
     footer {
-      border-top: 1px solid #202938;
       padding: 40px 8%;
+
+      border-top: 1px solid #202938;
+
       color: #7f8a99;
       font-size: 14px;
     }
 
-    @media (max-width: 700px) {
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
       nav .links {
         display: none;
       }
 
-      .hero {
-        padding-top: 60px;
+      .hero,
+      section {
+        padding-left: 5%;
+        padding-right: 5%;
       }
 
-      section {
-        padding-top: 60px;
-        padding-bottom: 60px;
+      .hero {
+        min-height: auto;
+        padding-top: 80px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .contact-box {
+        padding: 28px;
       }
     }
   </style>
@@ -175,153 +364,349 @@
 
 <body>
 
-<nav>
-  <div class="logo">TorqPro <span>AI</span></div>
-
-  <div class="links">
-    <a href="#platform">Platform</a>
-    <a href="#engineering">Engineering</a>
-    <a href="#ai">AI</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="eyebrow">Fastener Engineering Intelligence</div>
-
-  <h1>Engineering confidence for every critical joint.</h1>
-
-  <p>
-    TorqPro AI is an engineering platform for deterministic torque
-    recommendation, bolted-joint analysis, validation, traceability
-    and AI-assisted technical knowledge.
-  </p>
-
-  <div class="buttons">
-    <a class="button primary" href="#platform">Explore Platform</a>
-    <a class="button secondary" href="#contact">Request Demo</a>
-  </div>
-</header>
-
-<section id="platform">
-  <h2>TorqPro AI Platform</h2>
-
-  <p class="section-intro">
-    From fastener selection to engineering validation, TorqPro AI brings
-    calculation, standards, manufacturing knowledge and technical reasoning
-    into one traceable workflow.
-  </p>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Torque Recommendation</h3>
-      <p>
-        Deterministic engineering calculations for tightening torque,
-        preload and utilization.
-      </p>
+  <nav>
+    <div class="logo">
+      TorqPro <span>AI</span>
     </div>
 
-    <div class="card">
-      <h3>VDI 2230 Engineering</h3>
-      <p>
-        Engineering workflows based on bolted-joint design principles
-        and structured validation.
-      </p>
+    <div class="links">
+      <a href="#platform">Platform</a>
+      <a href="#engineering">Engineering</a>
+      <a href="#ai">AI</a>
+      <a href="#preview">Preview</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+
+    <div class="eyebrow">
+      Fastener Engineering Intelligence
     </div>
 
-    <div class="card">
-      <h3>Joint Analysis</h3>
-      <p>
-        Evaluate fastener, friction, preload and joint conditions through
-        structured engineering inputs.
-      </p>
+    <h1>
+      Engineering confidence for every critical joint.
+    </h1>
+
+    <p>
+      TorqPro AI is an engineering platform for deterministic torque
+      recommendation, bolted-joint analysis, validation, traceability
+      and AI-assisted technical knowledge.
+    </p>
+
+    <div class="buttons">
+      <a class="button primary" href="#platform">
+        Explore Platform
+      </a>
+
+      <a class="button secondary" href="#preview">
+        View Platform
+      </a>
+
+      <a class="button secondary" href="#contact">
+        Request Demo
+      </a>
     </div>
 
-    <div class="card">
-      <h3>Validation & Traceability</h3>
-      <p>
-        Preserve assumptions, calculation context and engineering decisions
-        for review and reuse.
-      </p>
+  </header>
+
+  <section id="platform">
+
+    <h2>
+      TorqPro AI Platform
+    </h2>
+
+    <p class="section-intro">
+      From fastener selection to engineering validation, TorqPro AI brings
+      calculation, standards, manufacturing knowledge and technical reasoning
+      into one traceable engineering workflow.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Torque Recommendation</h3>
+
+        <p>
+          Deterministic engineering calculations for tightening torque,
+          preload, utilization and operating conditions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>VDI 2230 Engineering</h3>
+
+        <p>
+          Structured bolted-joint engineering workflows supporting
+          load, preload, utilization and safety assessment.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Joint Analysis</h3>
+
+        <p>
+          Evaluate fastener, friction, preload, material and joint
+          conditions through controlled engineering inputs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Validation & Traceability</h3>
+
+        <p>
+          Preserve assumptions, calculation context and engineering
+          decisions for technical review and reuse.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Production Engineering</h3>
+
+        <p>
+          Connect fastening engineering with manufacturing quality,
+          process capability and validation principles.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Technical Knowledge</h3>
+
+        <p>
+          Structured engineering knowledge for standards, fasteners,
+          failure analysis and manufacturing practice.
+        </p>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>Production Engineering</h3>
-      <p>
-        Connect fastening engineering with manufacturing quality,
-        process capability and validation principles.
-      </p>
+  </section>
+
+  <section id="engineering">
+
+    <h2>
+      Engineering first.
+    </h2>
+
+    <p class="section-intro">
+      TorqPro AI is designed around deterministic engineering authority.
+      AI supports explanation, knowledge access and engineering reasoning
+      without overriding validated calculation results.
+    </p>
+
+    <div class="principle">
+      Deterministic engineering calculations remain authoritative.
+      AI is additive, explainable and traceable.
     </div>
 
-    <div class="card">
-      <h3>Technical Knowledge</h3>
-      <p>
-        Structured engineering knowledge for standards, fasteners,
-        failure analysis and manufacturing practice.
-      </p>
+    <div class="trust-strip">
+
+      <div class="trust-item">
+        <strong>Deterministic Core</strong>
+        <span>
+          Engineering calculations remain the primary source of truth.
+        </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Traceable Inputs</strong>
+        <span>
+          Assumptions and calculation context remain reviewable.
+        </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>Engineering Validation</strong>
+        <span>
+          Results are presented within a controlled validation workflow.
+        </span>
+      </div>
+
+      <div class="trust-item">
+        <strong>AI Separation</strong>
+        <span>
+          AI assistance does not replace authoritative engineering results.
+        </span>
+      </div>
+
     </div>
 
-  </div>
-</section>
+  </section>
 
-<section id="engineering">
-  <h2>Engineering first.</h2>
+  <section id="ai">
 
-  <p class="section-intro">
-    TorqPro AI is designed around deterministic engineering authority.
-    AI supports explanation, knowledge access and engineering reasoning
-    without overriding validated calculation results.
-  </p>
+    <h2>
+      AI-assisted engineering
+    </h2>
 
-  <div class="principle">
-    Deterministic engineering calculations remain authoritative.
-    AI is additive, explainable and traceable.
-  </div>
-</section>
+    <p class="section-intro">
+      AI capabilities are designed to improve understanding, navigation
+      and technical productivity while keeping engineering calculations
+      deterministic and traceable.
+    </p>
 
-<section id="ai">
-  <h2>AI-assisted engineering</h2>
+    <div class="grid">
 
-  <div class="grid">
+      <div class="card">
+        <h3>Engineering Explanation</h3>
 
-    <div class="card">
-      <h3>Engineering Explanation</h3>
-      <p>
-        Turn calculation outputs into clear engineering interpretation.
-      </p>
+        <p>
+          Turn calculation outputs into clearer engineering interpretation
+          and technical context.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Knowledge Assistance</h3>
+
+        <p>
+          Navigate technical concepts, standards and fastening engineering
+          knowledge more efficiently.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Traceable Reasoning</h3>
+
+        <p>
+          Keep AI-generated guidance clearly separated from deterministic
+          engineering results.
+        </p>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>Knowledge Assistance</h3>
-      <p>
-        Navigate technical concepts, standards and fastening engineering
-        knowledge more efficiently.
-      </p>
+  </section>
+
+  <section id="preview">
+
+    <h2>
+      Platform in Action
+    </h2>
+
+    <p class="section-intro">
+      Selected views from the TorqPro AI engineering environment.
+      Public images use demonstration data and are intended to illustrate
+      the product workflow without exposing private engineering code.
+    </p>
+
+    <div class="preview-grid">
+
+      <div class="preview-card">
+
+        <div class="preview-copy">
+          <h3>
+            Engineering Dashboard
+          </h3>
+
+          <p>
+            Central engineering workspace for analyses, fastener data,
+            calculations, validation status and traceability.
+          </p>
+        </div>
+
+        <img
+          src="torqpro-dashboard.png"
+          alt="TorqPro AI Engineering Dashboard"
+        >
+
+      </div>
+
+      <div class="preview-card">
+
+        <div class="preview-copy">
+          <h3>
+            Torque Recommendation
+          </h3>
+
+          <p>
+            Structured fastener and joint inputs with deterministic
+            tightening torque, preload and utilization results.
+          </p>
+        </div>
+
+        <img
+          src="torque-recommendation.png"
+          alt="TorqPro AI Torque Recommendation"
+        >
+
+      </div>
+
+      <div class="preview-card">
+
+        <div class="preview-copy">
+          <h3>
+            VDI 2230 Analysis
+          </h3>
+
+          <p>
+            Detailed bolted-joint analysis workspace with load,
+            preload, safety and engineering result visualization.
+          </p>
+        </div>
+
+        <img
+          src="vdi2230-analysis.png"
+          alt="TorqPro AI VDI 2230 Analysis"
+        >
+
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>Traceable Reasoning</h3>
+  </section>
+
+  <section id="contact">
+
+    <div class="contact-box">
+
+      <h2>
+        TorqPro AI
+      </h2>
+
       <p>
-        Keep AI assistance separated from deterministic engineering results.
+        TorqPro AI is under active development as an engineering platform
+        for fastening analysis, deterministic torque recommendation,
+        validation, traceability and AI-assisted technical knowledge.
       </p>
+
+      <p>
+        Contact us for product demonstration, engineering collaboration
+        or technology partnership opportunities.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="button primary"
+          href="https://github.com/TorqPro-AI/TorqPro-Web"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Public Repository
+        </a>
+
+      </div>
+
     </div>
 
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <h2>TorqPro AI</h2>
+  <footer>
 
-  <p class="section-intro">
-    Public demonstration environment under development.
-    Contact us for product and engineering collaboration.
-  </p>
-</section>
+    <div class="footer-inner">
 
-<footer>
-  © 2026 TorqPro AI. All rights reserved.
-</footer>
+      <div>
+        © 2026 TorqPro AI. All rights reserved.
+      </div>
+
+      <div>
+        Fastener Engineering · Validation · Traceability · AI
+      </div>
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
