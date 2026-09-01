@@ -44,7 +44,7 @@
       justify-content: space-between;
       align-items: center;
 
-      padding: 20px 8%;
+      padding: 14px 8%;
 
       border-bottom: 1px solid #202938;
       background: rgba(9, 13, 20, 0.94);
@@ -52,14 +52,17 @@
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
     }
 
-    .logo span {
-      opacity: 0.65;
-      font-weight: 500;
+    .logo img {
+      display: block;
+      width: auto;
+      height: 52px;
+      max-width: 300px;
+      object-fit: contain;
     }
 
     nav .links {
@@ -346,6 +349,11 @@
         padding-right: 5%;
       }
 
+      .logo img {
+        height: 42px;
+        max-width: 220px;
+      }
+
       nav .links {
         display: none;
       }
@@ -375,9 +383,13 @@
 <body>
 
   <nav>
-    <div class="logo">
-      TorqPro <span>AI</span>
-    </div>
+
+    <a class="logo" href="#">
+      <img
+        src="torqpro-ai-logo.png"
+        alt="TorqPro AI"
+      >
+    </a>
 
     <div class="links">
       <a href="#platform">Platform</a>
@@ -386,6 +398,7 @@
       <a href="#preview">Preview</a>
       <a href="#contact">Contact</a>
     </div>
+
   </nav>
 
   <header class="hero">
