@@ -63,6 +63,11 @@
       object-fit: contain;
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
     nav .links {
       display: flex;
       align-items: center;
@@ -78,6 +83,37 @@
 
     nav a:hover {
       opacity: 0.7;
+    }
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: 28px;
+      padding: 5px 9px;
+      border: 1px solid #334157;
+      border-radius: 8px;
+      background: #0e141e;
+    }
+
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: #7f8da2;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 2px 3px;
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active {
+      color: #6ea8ff;
+    }
+
+    .lang-separator {
+      color: #4d5a6d;
+      font-size: 12px;
     }
 
     .hero {
@@ -284,7 +320,7 @@
     }
 
     .contact-box > p {
-      max-width: 760px;
+      max-width: 800px;
       margin-top: 12px;
       color: #aab4c3;
     }
@@ -310,7 +346,7 @@
 
     .contact-role {
       margin-bottom: 18px;
-      color: #8e9aad;
+      color: #aab4c3;
       font-size: 14px;
     }
 
@@ -324,6 +360,18 @@
 
     .contact-person a:hover {
       text-decoration: underline;
+    }
+
+    .contact-address {
+      margin-top: 26px;
+      padding-top: 20px;
+      border-top: 1px solid #283445;
+      color: #aab4c3;
+      font-size: 14px;
+    }
+
+    .contact-address strong {
+      color: #f4f7fb;
     }
 
     .contact-box .buttons {
@@ -354,11 +402,15 @@
 
       .logo img {
         height: 58px;
-        max-width: 280px;
+        max-width: 240px;
       }
 
       nav .links {
         display: none;
+      }
+
+      .language-switcher {
+        margin-left: 12px;
       }
 
       .hero,
@@ -394,27 +446,97 @@
       >
     </a>
 
-    <div class="links">
-      <a href="#platform">Platform</a>
-      <a href="#engineering">Engineering</a>
-      <a href="#ai">AI</a>
-      <a href="#preview">Preview</a>
-      <a href="#contact">Contact</a>
+    <div class="nav-right">
+
+      <div class="links">
+        <a
+          href="#platform"
+          data-en="Platform"
+          data-tr="Platform"
+        >
+          Platform
+        </a>
+
+        <a
+          href="#engineering"
+          data-en="Engineering"
+          data-tr="Mühendislik"
+        >
+          Engineering
+        </a>
+
+        <a
+          href="#ai"
+          data-en="AI"
+          data-tr="Yapay Zekâ"
+        >
+          AI
+        </a>
+
+        <a
+          href="#preview"
+          data-en="Preview"
+          data-tr="Önizleme"
+        >
+          Preview
+        </a>
+
+        <a
+          href="#contact"
+          data-en="Contact"
+          data-tr="İletişim"
+        >
+          Contact
+        </a>
+      </div>
+
+      <div class="language-switcher" aria-label="Language selection">
+        <button
+          class="lang-btn active"
+          type="button"
+          data-lang="en"
+          aria-label="English"
+        >
+          EN
+        </button>
+
+        <span class="lang-separator">|</span>
+
+        <button
+          class="lang-btn"
+          type="button"
+          data-lang="tr"
+          aria-label="Türkçe"
+        >
+          TR
+        </button>
+      </div>
+
     </div>
 
   </nav>
 
   <header class="hero">
 
-    <div class="eyebrow">
+    <div
+      class="eyebrow"
+      data-en="Fastener Engineering Intelligence"
+      data-tr="Bağlantı Elemanları Mühendislik Zekâsı"
+    >
       Fastener Engineering Intelligence
     </div>
 
-    <h1>
+    <h1
+      data-en="Engineering confidence for every critical joint."
+      data-tr="Her kritik bağlantı için mühendislik güveni."
+    >
       Engineering confidence for every critical joint.
     </h1>
 
-    <p>
+    <p
+      data-en="TorqPro AI is an engineering platform for deterministic torque recommendation, bolted-joint analysis, validation, traceability and AI-assisted technical knowledge."
+      data-tr="TorqPro AI; deterministik tork önerisi, cıvatalı bağlantı analizi, doğrulama, izlenebilirlik ve yapay zekâ destekli teknik bilgi için geliştirilmiş bir mühendislik platformudur."
+    >
       TorqPro AI is an engineering platform for deterministic torque
       recommendation, bolted-joint analysis, validation, traceability
       and AI-assisted technical knowledge.
@@ -427,6 +549,8 @@
         href="https://torqpro-ai.onrender.com"
         target="_blank"
         rel="noopener noreferrer"
+        data-en="Launch TorqPro AI"
+        data-tr="TorqPro AI'ı Aç"
       >
         Launch TorqPro AI
       </a>
@@ -434,6 +558,8 @@
       <a
         class="button secondary"
         href="#preview"
+        data-en="View Platform"
+        data-tr="Platformu Gör"
       >
         View Platform
       </a>
@@ -441,6 +567,8 @@
       <a
         class="button secondary"
         href="#contact"
+        data-en="Contact"
+        data-tr="İletişim"
       >
         Contact
       </a>
@@ -448,7 +576,12 @@
     </div>
 
     <div class="demo-access">
-      Demo login:
+      <span
+        data-en="Demo login:"
+        data-tr="Demo giriş:"
+      >
+        Demo login:
+      </span>
       <strong>demo</strong>
       /
       <strong>A1234</strong>
@@ -458,9 +591,18 @@
 
   <section id="platform">
 
-    <h2>TorqPro AI Platform</h2>
+    <h2
+      data-en="TorqPro AI Platform"
+      data-tr="TorqPro AI Platformu"
+    >
+      TorqPro AI Platform
+    </h2>
 
-    <p class="section-intro">
+    <p
+      class="section-intro"
+      data-en="From fastener selection to engineering validation, TorqPro AI brings calculation, standards, manufacturing knowledge and technical reasoning into one traceable engineering workflow."
+      data-tr="Bağlantı elemanı seçiminden mühendislik doğrulamasına kadar TorqPro AI; hesaplama, standartlar, üretim bilgisi ve teknik muhakemeyi tek bir izlenebilir mühendislik iş akışında bir araya getirir."
+    >
       From fastener selection to engineering validation, TorqPro AI brings
       calculation, standards, manufacturing knowledge and technical reasoning
       into one traceable engineering workflow.
@@ -469,48 +611,102 @@
     <div class="grid">
 
       <div class="card">
-        <h3>Torque Recommendation</h3>
-        <p>
+        <h3
+          data-en="Torque Recommendation"
+          data-tr="Tork Önerisi"
+        >
+          Torque Recommendation
+        </h3>
+
+        <p
+          data-en="Deterministic engineering calculations for tightening torque, preload, utilization and operating conditions."
+          data-tr="Sıkma torku, ön yük, kullanım oranı ve çalışma koşulları için deterministik mühendislik hesaplamaları."
+        >
           Deterministic engineering calculations for tightening torque,
           preload, utilization and operating conditions.
         </p>
       </div>
 
       <div class="card">
-        <h3>VDI 2230 Engineering</h3>
-        <p>
+        <h3
+          data-en="VDI 2230 Engineering"
+          data-tr="VDI 2230 Mühendisliği"
+        >
+          VDI 2230 Engineering
+        </h3>
+
+        <p
+          data-en="Structured bolted-joint engineering workflows supporting load, preload, utilization and safety assessment."
+          data-tr="Yük, ön yük, kullanım ve emniyet değerlendirmelerini destekleyen yapılandırılmış cıvatalı bağlantı mühendisliği iş akışları."
+        >
           Structured bolted-joint engineering workflows supporting
           load, preload, utilization and safety assessment.
         </p>
       </div>
 
       <div class="card">
-        <h3>Joint Analysis</h3>
-        <p>
+        <h3
+          data-en="Joint Analysis"
+          data-tr="Bağlantı Analizi"
+        >
+          Joint Analysis
+        </h3>
+
+        <p
+          data-en="Evaluate fastener, friction, preload, material and joint conditions through controlled engineering inputs."
+          data-tr="Bağlantı elemanı, sürtünme, ön yük, malzeme ve bağlantı koşullarını kontrollü mühendislik girdileriyle değerlendirin."
+        >
           Evaluate fastener, friction, preload, material and joint
           conditions through controlled engineering inputs.
         </p>
       </div>
 
       <div class="card">
-        <h3>Validation & Traceability</h3>
-        <p>
+        <h3
+          data-en="Validation & Traceability"
+          data-tr="Doğrulama & İzlenebilirlik"
+        >
+          Validation & Traceability
+        </h3>
+
+        <p
+          data-en="Preserve assumptions, calculation context and engineering decisions for technical review and reuse."
+          data-tr="Teknik inceleme ve yeniden kullanım için varsayımları, hesaplama bağlamını ve mühendislik kararlarını koruyun."
+        >
           Preserve assumptions, calculation context and engineering
           decisions for technical review and reuse.
         </p>
       </div>
 
       <div class="card">
-        <h3>Production Engineering</h3>
-        <p>
+        <h3
+          data-en="Production Engineering"
+          data-tr="Üretim Mühendisliği"
+        >
+          Production Engineering
+        </h3>
+
+        <p
+          data-en="Connect fastening engineering with manufacturing quality, process capability and validation principles."
+          data-tr="Bağlantı elemanları mühendisliğini üretim kalitesi, proses yeterliliği ve doğrulama prensipleriyle birleştirin."
+        >
           Connect fastening engineering with manufacturing quality,
           process capability and validation principles.
         </p>
       </div>
 
       <div class="card">
-        <h3>Technical Knowledge</h3>
-        <p>
+        <h3
+          data-en="Technical Knowledge"
+          data-tr="Teknik Bilgi"
+        >
+          Technical Knowledge
+        </h3>
+
+        <p
+          data-en="Structured engineering knowledge for standards, fasteners, failure analysis and manufacturing practice."
+          data-tr="Standartlar, bağlantı elemanları, hata analizi ve üretim uygulamaları için yapılandırılmış mühendislik bilgisi."
+        >
           Structured engineering knowledge for standards, fasteners,
           failure analysis and manufacturing practice.
         </p>
@@ -522,15 +718,28 @@
 
   <section id="engineering">
 
-    <h2>Engineering first.</h2>
+    <h2
+      data-en="Engineering first."
+      data-tr="Önce mühendislik."
+    >
+      Engineering first.
+    </h2>
 
-    <p class="section-intro">
+    <p
+      class="section-intro"
+      data-en="TorqPro AI is designed around deterministic engineering authority. AI supports explanation, knowledge access and engineering reasoning without overriding validated calculation results."
+      data-tr="TorqPro AI, deterministik mühendislik otoritesi temelinde tasarlanmıştır. Yapay zekâ; doğrulanmış hesaplama sonuçlarının yerine geçmeden açıklama, bilgi erişimi ve mühendislik muhakemesini destekler."
+    >
       TorqPro AI is designed around deterministic engineering authority.
       AI supports explanation, knowledge access and engineering reasoning
       without overriding validated calculation results.
     </p>
 
-    <div class="principle">
+    <div
+      class="principle"
+      data-en="Deterministic engineering calculations remain authoritative. AI is additive, explainable and traceable."
+      data-tr="Deterministik mühendislik hesaplamaları otorite olmaya devam eder. Yapay zekâ tamamlayıcı, açıklanabilir ve izlenebilirdir."
+    >
       Deterministic engineering calculations remain authoritative.
       AI is additive, explainable and traceable.
     </div>
@@ -538,23 +747,67 @@
     <div class="trust-strip">
 
       <div class="trust-item">
-        <strong>Deterministic Core</strong>
-        <span>Engineering calculations remain the primary source of truth.</span>
+        <strong
+          data-en="Deterministic Core"
+          data-tr="Deterministik Çekirdek"
+        >
+          Deterministic Core
+        </strong>
+
+        <span
+          data-en="Engineering calculations remain the primary source of truth."
+          data-tr="Mühendislik hesaplamaları temel doğruluk kaynağı olmaya devam eder."
+        >
+          Engineering calculations remain the primary source of truth.
+        </span>
       </div>
 
       <div class="trust-item">
-        <strong>Traceable Inputs</strong>
-        <span>Assumptions and calculation context remain reviewable.</span>
+        <strong
+          data-en="Traceable Inputs"
+          data-tr="İzlenebilir Girdiler"
+        >
+          Traceable Inputs
+        </strong>
+
+        <span
+          data-en="Assumptions and calculation context remain reviewable."
+          data-tr="Varsayımlar ve hesaplama bağlamı incelenebilir olarak korunur."
+        >
+          Assumptions and calculation context remain reviewable.
+        </span>
       </div>
 
       <div class="trust-item">
-        <strong>Engineering Validation</strong>
-        <span>Results are presented within a controlled validation workflow.</span>
+        <strong
+          data-en="Engineering Validation"
+          data-tr="Mühendislik Doğrulaması"
+        >
+          Engineering Validation
+        </strong>
+
+        <span
+          data-en="Results are presented within a controlled validation workflow."
+          data-tr="Sonuçlar kontrollü bir doğrulama iş akışı içinde sunulur."
+        >
+          Results are presented within a controlled validation workflow.
+        </span>
       </div>
 
       <div class="trust-item">
-        <strong>AI Separation</strong>
-        <span>AI assistance does not replace authoritative engineering results.</span>
+        <strong
+          data-en="AI Separation"
+          data-tr="Yapay Zekâ Ayrımı"
+        >
+          AI Separation
+        </strong>
+
+        <span
+          data-en="AI assistance does not replace authoritative engineering results."
+          data-tr="Yapay zekâ desteği, otorite kabul edilen mühendislik sonuçlarının yerini almaz."
+        >
+          AI assistance does not replace authoritative engineering results.
+        </span>
       </div>
 
     </div>
@@ -563,9 +816,18 @@
 
   <section id="ai">
 
-    <h2>AI-assisted engineering</h2>
+    <h2
+      data-en="AI-assisted engineering"
+      data-tr="Yapay zekâ destekli mühendislik"
+    >
+      AI-assisted engineering
+    </h2>
 
-    <p class="section-intro">
+    <p
+      class="section-intro"
+      data-en="AI capabilities are designed to improve understanding, navigation and technical productivity while keeping engineering calculations deterministic and traceable."
+      data-tr="Yapay zekâ yetenekleri; mühendislik hesaplamalarını deterministik ve izlenebilir tutarken anlama, bilgiye erişim ve teknik verimliliği geliştirmek için tasarlanmıştır."
+    >
       AI capabilities are designed to improve understanding, navigation
       and technical productivity while keeping engineering calculations
       deterministic and traceable.
@@ -574,24 +836,51 @@
     <div class="grid">
 
       <div class="card">
-        <h3>Engineering Explanation</h3>
-        <p>
+        <h3
+          data-en="Engineering Explanation"
+          data-tr="Mühendislik Açıklaması"
+        >
+          Engineering Explanation
+        </h3>
+
+        <p
+          data-en="Turn calculation outputs into clearer engineering interpretation and technical context."
+          data-tr="Hesaplama çıktılarını daha anlaşılır mühendislik yorumlarına ve teknik bağlama dönüştürün."
+        >
           Turn calculation outputs into clearer engineering interpretation
           and technical context.
         </p>
       </div>
 
       <div class="card">
-        <h3>Knowledge Assistance</h3>
-        <p>
+        <h3
+          data-en="Knowledge Assistance"
+          data-tr="Bilgi Desteği"
+        >
+          Knowledge Assistance
+        </h3>
+
+        <p
+          data-en="Navigate technical concepts, standards and fastening engineering knowledge more efficiently."
+          data-tr="Teknik kavramlara, standartlara ve bağlantı elemanları mühendisliği bilgisine daha verimli erişin."
+        >
           Navigate technical concepts, standards and fastening engineering
           knowledge more efficiently.
         </p>
       </div>
 
       <div class="card">
-        <h3>Traceable Reasoning</h3>
-        <p>
+        <h3
+          data-en="Traceable Reasoning"
+          data-tr="İzlenebilir Muhakeme"
+        >
+          Traceable Reasoning
+        </h3>
+
+        <p
+          data-en="Keep AI-generated guidance clearly separated from deterministic engineering results."
+          data-tr="Yapay zekâ tarafından üretilen yönlendirmeleri deterministik mühendislik sonuçlarından açıkça ayrı tutun."
+        >
           Keep AI-generated guidance clearly separated from deterministic
           engineering results.
         </p>
@@ -603,9 +892,18 @@
 
   <section id="preview">
 
-    <h2>Platform in Action</h2>
+    <h2
+      data-en="Platform in Action"
+      data-tr="Platform Uygulamada"
+    >
+      Platform in Action
+    </h2>
 
-    <p class="section-intro">
+    <p
+      class="section-intro"
+      data-en="Selected views from the TorqPro AI engineering environment. Public images use demonstration data and are intended to illustrate the product workflow without exposing private engineering code."
+      data-tr="TorqPro AI mühendislik ortamından seçilmiş ekranlar. Herkese açık görseller demo verileri kullanır ve özel mühendislik kodunu açığa çıkarmadan ürün iş akışını göstermek amacıyla sunulur."
+    >
       Selected views from the TorqPro AI engineering environment.
       Public images use demonstration data and are intended to illustrate
       the product workflow without exposing private engineering code.
@@ -616,9 +914,17 @@
       <div class="preview-card">
 
         <div class="preview-copy">
-          <h3>Engineering Dashboard</h3>
+          <h3
+            data-en="Engineering Dashboard"
+            data-tr="Mühendislik Paneli"
+          >
+            Engineering Dashboard
+          </h3>
 
-          <p>
+          <p
+            data-en="Central engineering workspace for analyses, fastener data, calculations, validation status and traceability."
+            data-tr="Analizler, bağlantı elemanı verileri, hesaplamalar, doğrulama durumu ve izlenebilirlik için merkezi mühendislik çalışma alanı."
+          >
             Central engineering workspace for analyses, fastener data,
             calculations, validation status and traceability.
           </p>
@@ -634,9 +940,17 @@
       <div class="preview-card">
 
         <div class="preview-copy">
-          <h3>Torque Recommendation</h3>
+          <h3
+            data-en="Torque Recommendation"
+            data-tr="Tork Önerisi"
+          >
+            Torque Recommendation
+          </h3>
 
-          <p>
+          <p
+            data-en="Structured fastener and joint inputs with deterministic tightening torque, preload and utilization results."
+            data-tr="Deterministik sıkma torku, ön yük ve kullanım sonuçlarıyla yapılandırılmış bağlantı elemanı ve bağlantı girdileri."
+          >
             Structured fastener and joint inputs with deterministic
             tightening torque, preload and utilization results.
           </p>
@@ -652,9 +966,17 @@
       <div class="preview-card">
 
         <div class="preview-copy">
-          <h3>VDI 2230 Analysis</h3>
+          <h3
+            data-en="VDI 2230 Analysis"
+            data-tr="VDI 2230 Analizi"
+          >
+            VDI 2230 Analysis
+          </h3>
 
-          <p>
+          <p
+            data-en="Detailed bolted-joint analysis workspace with load, preload, safety and engineering result visualization."
+            data-tr="Yük, ön yük, emniyet ve mühendislik sonuçlarının görselleştirildiği detaylı cıvatalı bağlantı analiz çalışma alanı."
+          >
             Detailed bolted-joint analysis workspace with load,
             preload, safety and engineering result visualization.
           </p>
@@ -675,9 +997,17 @@
 
     <div class="contact-box">
 
-      <h2>Contact</h2>
+      <h2
+        data-en="Contact"
+        data-tr="İletişim"
+      >
+        Contact
+      </h2>
 
-      <p>
+      <p
+        data-en="For TorqPro AI product information, engineering collaboration, demonstrations or partnership opportunities, please contact us."
+        data-tr="TorqPro AI ürün bilgisi, mühendislik iş birlikleri, demo talepleri veya iş ortaklığı fırsatları için bizimle iletişime geçebilirsiniz."
+      >
         For TorqPro AI product information, engineering collaboration,
         demonstrations or partnership opportunities, please contact us.
       </p>
@@ -688,8 +1018,12 @@
 
           <h3>İlhan ÇEKİÇ</h3>
 
-          <div class="contact-role">
-            Engineering & Product
+          <div
+            class="contact-role"
+            data-en="Engineering, Product & Business Development"
+            data-tr="Mühendislik, Ürün & İş Geliştirme"
+          >
+            Engineering, Product & Business Development
           </div>
 
           <a href="mailto:cekic.ilhan@gmail.com">
@@ -714,8 +1048,12 @@
 
           <h3>Koray Tokol</h3>
 
-          <div class="contact-role">
-            Business & Technology
+          <div
+            class="contact-role"
+            data-en="Consulting & Technology"
+            data-tr="Danışmanlık & Teknoloji"
+          >
+            Consulting & Technology
           </div>
 
           <a href="mailto:koray.tokol@outlook.com">
@@ -738,6 +1076,17 @@
 
       </div>
 
+      <div class="contact-address">
+        <strong
+          data-en="Address"
+          data-tr="Adres"
+        >
+          Address
+        </strong>
+        <br>
+        Nilüfer / Bursa / Türkiye
+      </div>
+
       <div class="buttons">
 
         <a
@@ -745,6 +1094,8 @@
           href="https://torqpro-ai.onrender.com"
           target="_blank"
           rel="noopener noreferrer"
+          data-en="Launch TorqPro AI"
+          data-tr="TorqPro AI'ı Aç"
         >
           Launch TorqPro AI
         </a>
@@ -754,6 +1105,8 @@
           href="https://github.com/TorqPro-AI/TorqPro-Web"
           target="_blank"
           rel="noopener noreferrer"
+          data-en="Public Website Repository"
+          data-tr="Herkese Açık Web Sitesi Deposu"
         >
           Public Website Repository
         </a>
@@ -761,7 +1114,12 @@
       </div>
 
       <div class="demo-access">
-        Demo login:
+        <span
+          data-en="Demo login:"
+          data-tr="Demo giriş:"
+        >
+          Demo login:
+        </span>
         <strong>demo</strong>
         /
         <strong>A1234</strong>
@@ -774,12 +1132,59 @@
   <footer>
 
     <div class="footer-inner">
-      <div>© 2026 TorqPro AI</div>
-      <div>Fastener Engineering Intelligence</div>
+
+      <div>
+        © 2026 TorqPro AI
+      </div>
+
+      <div
+        data-en="Fastener Engineering Intelligence"
+        data-tr="Bağlantı Elemanları Mühendislik Zekâsı"
+      >
+        Fastener Engineering Intelligence
+      </div>
+
     </div>
 
   </footer>
 
+  <script>
+    const languageButtons = document.querySelectorAll(".lang-btn");
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-en][data-tr]").forEach((element) => {
+        element.textContent = element.dataset[lang];
+      });
+
+      languageButtons.forEach((button) => {
+        button.classList.toggle(
+          "active",
+          button.dataset.lang === lang
+        );
+      });
+
+      if (lang === "tr") {
+        document.title = "TorqPro AI | Bağlantı Elemanları Mühendislik Platformu";
+      } else {
+        document.title = "TorqPro AI | Fastener Engineering Platform";
+      }
+
+      localStorage.setItem("torqpro-language", lang);
+    }
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.lang);
+      });
+    });
+
+    const savedLanguage =
+      localStorage.getItem("torqpro-language") || "en";
+
+    setLanguage(savedLanguage);
+  </script>
+
 </body>
 </html>
-
