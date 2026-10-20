@@ -36,3 +36,13 @@ test('plot stays within SVG for supported inputs',async({page})=>{
   expect(point.y).toBeLessThanOrEqual(304);
  }
 });
+
+test('visual screenshots at desktop and mobile',async({page})=>{
+ for(const width of [390,768,1440]){
+  await page.setViewportSize({width,height:900});
+  await page.goto('http://127.0.0.1:43891/index.html');
+  await page.screenshot({path:'test-results/home-'+width+'.png',fullPage:true});
+  await page.goto('http://127.0.0.1:43891/engineering.html');
+  await page.screenshot({path:'test-results/engineering-'+width+'.png',fullPage:true});
+ }
+});
