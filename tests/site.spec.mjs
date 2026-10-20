@@ -1,0 +1,13 @@
+import { test, expect } from '@playwright/test';
+import { createServer } from 'node:http';
+import { readFile } from 'node:fs/promises';
+import { resolve, extname } from 'node:path';
+let server;
+const types={'.html':'text/html; charset=utf-8','.png':'image/png','.js':'application/javascript'};
+test.beforeAll(async()=>{server=createServer(async(req,res)=>{try{const path=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);const safe=path==='/'?'index.html':path.replace(/^\/+/, '');if(safe.includes('..'))throw Error('Invalid path');const data=await readFile(resolve(process.cwd(),safe));res.writeHead(200,{'Content-Type':types[extname(safe)]||'application/octet-stream'});res.end(data)}catch(e){res.writeHead(404);res.end('Not found')}});await new Promise(ok=>server.listen(43891,'127.0.0.1',ok))});
+test.afterAll(async()=>{if(server)await new Promise(ok=>server.close(ok))});
+for(const width of [390,768,1280,1440]){
+ test('landing and engineering layout at '+width,async({page})=>{await page.setViewportSize({width,height:850});await page.goto('http://127.0.0.1:43891/index.html');await expect(page.locator('h1')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width+1);await page.goto('http://127.0.0.1:43891/engineering.html');await expect(page.locator('#plot')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width+1)});
+}
+test('language, controls, chart and stepper',async({page})=>{await page.goto('http://127.0.0.1:43891/engineering.html');await page.getByRole('button',{name:'TR',exact:true}).click();await expect(page.locator('h1')).toContainText('Mühendislik netliği');await page.locator('#torque').fill('100');await page.locator('#factor').fill('0.15');await expect(page.locator('#metric-preload')).toHaveText('55.6 kN');await page.locator('[data-stage="2"]').click();await expect(page.locator('#stage-description')).toContainText('basma kuvveti');await page.getByRole('button',{name:'EN',exact:true}).click();await expect(page.locator('#stage-description')).toContainText('compression');});
+test('existing screenshots load',async({page})=>{await page.goto('http://127.0.0.1:43891/index.html');for(const name of ['torqpro-dashboard.png','torque-recommendation.png','vdi2230-analysis.png']){const img=page.locator('img[src="./'+name+'"]');await img.scrollIntoViewIfNeeded();await expect.poll(()=>img.evaluate(el=>el.complete&&el.naturalWidth>0)).toBe(true)}});
