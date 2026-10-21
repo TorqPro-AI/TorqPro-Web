@@ -20,6 +20,8 @@ test('homepage navigation to engineering and language persistence', async ({page
  await expect(page.locator('.nav-links')).toHaveClass(/open/);
  await page.locator('.nav-links [href="./engineering.html"]').click();
  await expect(page).toHaveURL(/engineering\.html$/);
+ await page.locator('.menu-toggle').click();
+ await expect(page.locator('#eng-links')).toHaveClass(/open/);
  await page.getByRole('button',{name:'TR',exact:true}).click();
  await page.goto('http://127.0.0.1:43891/index.html');
  await expect(page.locator('h1')).toContainText('Kritik cıvatalı bağlantılar');
