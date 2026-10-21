@@ -6,7 +6,7 @@
 <meta name="description" content="TorqPro AI: engineering software for deterministic torque and preload calculations, standards-informed bolted-joint analysis, validation, and traceability.">
 <title>TorqPro AI | Precision Engineering for Bolted Joints</title>
 <style>
-:root{color-scheme:dark;--bg:#07111e;--panel:#0d1c2e;--panel2:#10253a;--line:#243950;--txt:#edf5fd;--muted:#aec1d2;--accent:#4ab8e8;--gold:#f1be66}
+:root{color-scheme:dark;--bg:#07111e;--panel:#0d1c2e;--panel2:#10253a;--line:#243950;--txt:#edf5fd;--muted:#aec1d2;--accent:#4ab8e8;--gold:#f1be66;--mag:#e84ab8;--vio:#aa81ff;--lime:#a6f27d;--org:#ff8c66}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.55}a{color:inherit}button{font:inherit}img{max-width:100%}
 .wrap{width:min(1180px,calc(100% - 40px));margin-inline:auto}.skip{position:absolute;left:-999px}.skip:focus{left:15px;top:15px;padding:10px;background:white;color:black;z-index:99}
 nav{position:sticky;z-index:40;top:0;background:#07111eea;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}nav>.wrap{display:flex;align-items:center;justify-content:space-between;min-height:82px;gap:25px}
@@ -23,15 +23,24 @@ h1{font-size:clamp(42px,5.5vw,75px);letter-spacing:-.05em;line-height:1.08;margi
 .figure-note{color:var(--muted);font-size:13px;margin:12px 0}
 .highlights{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.pill{font-size:12px;padding:7px 11px;border:1px solid #35516c;border-radius:50px;color:#cce4f3}
 section{padding:90px 0;scroll-margin-top:80px}.sub{background:#0a1726}h2{font-size:clamp(30px,3.4vw,47px);letter-spacing:-.035em;line-height:1.15;margin:14px 0}.intro{color:var(--muted);font-size:17px;max-width:750px;margin-bottom:32px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);background:linear-gradient(145deg,#10263a,#0b1a2a);border-radius:16px;padding:25px;min-height:185px}.card strong{font-size:19px}.card p{color:var(--muted);margin:10px 0 0}.num{color:var(--gold);font-size:13px;font-weight:bold;letter-spacing:.1em}
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.step{border-top:2px solid var(--accent);background:#0f2436;padding:23px 18px;border-radius:0 0 12px 12px}.step p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{--c:var(--accent);border:1px solid var(--line);border-top:3px solid var(--c);background:linear-gradient(145deg,#10263a,#0b1a2a);border-radius:0 0 16px 16px;padding:22px;min-height:185px;transition:border-color .25s,transform .25s}.card:hover{transform:translateY(-4px);border-color:var(--c)}
+.card-art{width:100%;height:68px;display:block;margin-bottom:14px;overflow:visible}
+.card strong{font-size:19px}.card p{color:var(--muted);margin:10px 0 0}.num{color:var(--gold);font-size:13px;font-weight:bold;letter-spacing:.1em}
+.steps-flow{display:grid;grid-template-columns:1fr 28px 1fr 28px 1fr 28px 1fr;align-items:start;gap:0;margin-top:10px}
+.step{background:#0f2436;border-top:2px solid var(--accent);padding:22px 18px;border-radius:0 0 12px 12px}
+.step-arr{display:flex;align-items:flex-start;padding-top:22px;color:var(--accent);opacity:.6;font-size:26px;justify-content:center;user-select:none;line-height:1}
+.step-circle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1d5c82,#0f3352);border:2px solid var(--accent);font-weight:900;font-size:14px;color:var(--accent);margin-bottom:10px}
+.step p{color:var(--muted);margin:8px 0 0;font-size:15px}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+.ind-card{border:1px solid var(--line);background:linear-gradient(145deg,#0e2236,#091826);border-radius:14px;padding:18px 16px;display:flex;align-items:center;gap:14px;transition:border-color .2s,transform .18s}.ind-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.ind-icon{flex-shrink:0;width:44px;height:44px}.ind-label{font-size:15px;font-weight:700;line-height:1.3}.ind-sub{font-size:12px;color:var(--muted);margin-top:3px}
 .showcase{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.showcase figure{margin:0}.showcase figure img{border-radius:15px;border:1px solid var(--line);width:100%}.showcase figure figcaption{color:var(--muted);font-size:13px;margin-top:9px}
-.tags{display:flex;flex-wrap:wrap;gap:12px}.tag{padding:12px 18px;border:1px solid var(--line);background:#10273a;border-radius:9px}
 .banner{border-radius:20px;border:1px solid #32516d;padding:40px;background:radial-gradient(circle at 90% 10%,#1d568265,transparent 50%),#10273a}
 footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:880px){.hero-grid,.showcase{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:82px;padding:20px;background:#091827;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}nav>.wrap{min-height:82px}}
-@media(max-width:560px){.wrap{width:min(100% - 32px,1180px)}.grid,.steps{grid-template-columns:1fr}.hero{padding:60px 0}.hero h1{font-size:42px}section{padding:66px 0}.banner{padding:26px}.brand img{max-width:150px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+@media(max-width:880px){.hero-grid,.showcase{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.steps-flow{grid-template-columns:1fr 28px 1fr}.step-arr:nth-child(6){display:none}.menu-toggle{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:82px;padding:20px;background:#091827;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav-links.open{display:flex}nav>.wrap{min-height:82px}.ind-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.wrap{width:min(100% - 32px,1180px)}.grid,.steps-flow,.ind-grid{grid-template-columns:1fr}.step-arr{display:none}.hero{padding:60px 0}.hero h1{font-size:42px}section{padding:66px 0}.banner{padding:26px}.brand img{max-width:150px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.card,.ind-card{transition:none}}
 </style>
 </head>
 <body>
@@ -41,7 +50,8 @@ footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-en="Menu" data-tr="Menü">Menu</button>
 <div class="nav-links" id="nav-links">
 <a href="#capabilities" data-en="Capabilities" data-tr="Kabiliyetler">Capabilities</a>
-<a href="./engineering.html" data-en="Engineering Solutions" data-tr="Mühendislik Çözümleri">Engineering Solutions</a><a href="#workflow" data-en="Workflow" data-tr="İş Akışı">Workflow</a>
+<a href="./engineering.html" data-en="Engineering Solutions" data-tr="Mühendislik Çözümleri">Engineering Solutions</a>
+<a href="#workflow" data-en="Workflow" data-tr="İş Akışı">Workflow</a>
 <a href="#applications" data-en="Applications" data-tr="Uygulamalar">Applications</a>
 <a href="#research" data-en="Methodology" data-tr="Metodoloji">Methodology</a>
 <a href="#contact" data-en="Contact" data-tr="İletişim">Contact</a>
@@ -55,28 +65,247 @@ footer{padding:27px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <p class="lead" data-en="Bring torque and preload calculations, bolted-joint engineering, validation, and traceability into one practical workflow—grounded in deterministic calculations with AI-assisted knowledge." data-tr="Tork ve ön yük hesaplamalarını, cıvatalı bağlantı analizlerini, doğrulamayı ve izlenebilirliği; deterministik hesaplama ve AI destekli teknik bilgiyle tek bir iş akışında birleştirin.">Bring torque and preload calculations, bolted-joint engineering, validation, and traceability into one practical workflow—grounded in deterministic calculations with AI-assisted knowledge.</p>
 <div class="actions"><a class="btn btn-main" href="https://torqpro-ai.onrender.com/" target="_blank" rel="noopener noreferrer" data-en="Launch live demo ↗" data-tr="Canlı demoyu aç ↗">Launch live demo ↗</a><a class="btn btn-alt" href="./engineering.html" data-en="Explore engineering solutions" data-tr="Mühendislik çözümlerini keşfet">Explore engineering solutions</a></div>
 <div class="highlights"><span class="pill">VDI 2230</span><span class="pill">ISO 16047</span><span class="pill">ISO 2320</span><span class="pill" data-en="Deterministic core" data-tr="Deterministik çekirdek">Deterministic core</span></div></div>
-<div class="hero-visual"><div class="shot"><img src="./torqpro-dashboard.png" alt="TorqPro AI engineering dashboard" fetchpriority="high"></div><p class="figure-note" data-en="Product interface image from the TorqPro AI web repository." data-tr="TorqPro AI web deposundaki ürün arayüzü görseli.">Product interface image from the TorqPro AI web repository.</p></div></div></header>
-<section id="capabilities"><div class="wrap"><span class="eyebrow" data-en="CAPABILITIES" data-tr="KABİLİYETLER">CAPABILITIES</span><h2 data-en="From inputs to defensible engineering decisions." data-tr="Girdilerden gerekçelendirilebilir mühendislik kararlarına.">From inputs to defensible engineering decisions.</h2><p class="intro" data-en="Calculation, evaluation, and manufacturing verification belong in a connected engineering process." data-tr="Hesaplama, değerlendirme ve üretim doğrulaması bütünleşik bir mühendislik sürecinin parçalarıdır.">Calculation, evaluation, and manufacturing verification belong in a connected engineering process.</p>
+<div class="hero-visual"><div class="shot"><img src="./torqpro-dashboard.png" alt="TorqPro AI engineering dashboard" fetchpriority="high"></div><p class="figure-note" data-en="Product interface image from the TorqPro AI web repository." data-tr="TorqPro AI web deposundaki ürün arayüzü görseli.">Product interface image from the TorqPro AI web repository.</p></div>
+</div></header>
+
+<section id="capabilities"><div class="wrap">
+<span class="eyebrow" data-en="CAPABILITIES" data-tr="KABİLİYETLER">CAPABILITIES</span>
+<h2 data-en="From inputs to defensible engineering decisions." data-tr="Girdilerden gerekçelendirilebilir mühendislik kararlarına.">From inputs to defensible engineering decisions.</h2>
+<p class="intro" data-en="Calculation, evaluation, and manufacturing verification belong in a connected engineering process." data-tr="Hesaplama, değerlendirme ve üretim doğrulaması bütünleşik bir mühendislik sürecinin parçalarıdır.">Calculation, evaluation, and manufacturing verification belong in a connected engineering process.</p>
 <div class="grid">
-<article class="card"><span class="num">01</span><h3 data-en="Torque & preload" data-tr="Tork ve ön yük">Torque & preload</h3><p data-en="Deterministic torque/preload estimates with clearly defined engineering assumptions." data-tr="Açıkça tanımlanmış mühendislik varsayımlarıyla deterministik tork/ön yük hesapları.">Deterministic torque/preload estimates with clearly defined engineering assumptions.</p></article>
-<article class="card"><span class="num">02</span><h3 data-en="Bolted-joint assessment" data-tr="Cıvatalı bağlantı analizi">Bolted-joint assessment</h3><p data-en="Standards-informed joint-load and capacity evaluation workflows, including VDI 2230 concepts." data-tr="VDI 2230 kavramlarını içeren, standartlara dayalı bağlantı yükü ve kapasite değerlendirme iş akışları.">Standards-informed joint-load and capacity evaluation workflows, including VDI 2230 concepts.</p></article>
-<article class="card"><span class="num">03</span><h3 data-en="Friction & tightening" data-tr="Sürtünme ve sıkma">Friction & tightening</h3><p data-en="Explore the influence of tightening parameters and friction on the torque–preload relationship." data-tr="Sıkma parametreleri ile sürtünmenin tork–ön yük ilişkisine etkisini inceleyin.">Explore the influence of tightening parameters and friction on the torque–preload relationship.</p></article>
-<article class="card"><span class="num">04</span><h3 data-en="Validation & SPC" data-tr="Doğrulama ve SPC">Validation & SPC</h3><p data-en="Connect engineering targets to measurement, validation, and process monitoring." data-tr="Mühendislik hedeflerini ölçüm, doğrulama ve proses izleme ile ilişkilendirin.">Connect engineering targets to measurement, validation, and process monitoring.</p></article>
-<article class="card"><span class="num">05</span><h3 data-en="Traceability" data-tr="İzlenebilirlik">Traceability</h3><p data-en="Keep engineering context, calculations, and evaluation records organized." data-tr="Mühendislik bağlamını, hesaplamaları ve değerlendirme kayıtlarını düzenli tutun.">Keep engineering context, calculations, and evaluation records organized.</p></article>
-<article class="card"><span class="num">06</span><h3 data-en="AI-assisted knowledge" data-tr="AI destekli teknik bilgi">AI-assisted knowledge</h3><p data-en="Use AI for interpretation and support, while critical engineering formulas remain deterministic." data-tr="AI'dan yorumlama ve teknik destekte yararlanın; kritik mühendislik formülleri deterministik kalsın.">Use AI for interpretation and support, while critical engineering formulas remain deterministic.</p></article>
+
+<article class="card" style="--c:#4ab8e8">
+<svg class="card-art" viewBox="0 0 200 68" aria-hidden="true">
+  <defs><linearGradient id="gcyan" x1="0" x2="1"><stop offset="0" stop-color="#4ab8e8"/><stop offset="1" stop-color="#62c9f1" stop-opacity=".3"/></linearGradient></defs>
+  <polygon points="34,8 46,14 46,28 34,34 22,28 22,14" fill="#0d2a3d" stroke="#4ab8e8" stroke-width="2"/>
+  <polygon points="34,12 43,17 43,27 34,31 25,27 25,17" fill="#4ab8e8" opacity=".15"/>
+  <rect x="31" y="34" width="6" height="24" rx="2" fill="#b0cfe0" opacity=".7"/>
+  <path d="M50,18 A20,20 0 0,1 30,40" fill="none" stroke="#4ab8e8" stroke-width="2.5" stroke-linecap="round"/>
+  <polygon points="29,40 27,33 34,36" fill="#4ab8e8"/>
+  <rect x="118" y="38" width="11" height="26" rx="2" fill="#4ab8e8" opacity=".7"/>
+  <rect x="133" y="28" width="11" height="36" rx="2" fill="#4ab8e8" opacity=".55"/>
+  <rect x="148" y="20" width="11" height="44" rx="2" fill="#4ab8e8" opacity=".4"/>
+  <rect x="163" y="30" width="11" height="34" rx="2" fill="#4ab8e8" opacity=".55"/>
+  <line x1="116" y1="64" x2="176" y2="64" stroke="#243950" stroke-width="1.5"/>
+  <text x="86" y="22" font-size="11" fill="#4ab8e8" font-weight="700">T = K·F·d</text>
+  <text x="90" y="36" font-size="9" fill="#aec1d2" opacity=".7">Preload →</text>
+</svg>
+<span class="num">01</span><h3 data-en="Torque & preload" data-tr="Tork ve ön yük">Torque & preload</h3><p data-en="Deterministic torque/preload estimates with clearly defined engineering assumptions." data-tr="Açıkça tanımlanmış mühendislik varsayımlarıyla deterministik tork/ön yük hesapları.">Deterministic torque/preload estimates with clearly defined engineering assumptions.</p>
+</article>
+
+<article class="card" style="--c:#e84ab8">
+<svg class="card-art" viewBox="0 0 200 68" aria-hidden="true">
+  <rect x="18" y="16" width="96" height="17" rx="3" fill="#1a2a40" stroke="#e84ab8" stroke-width="1.8"/>
+  <rect x="18" y="37" width="96" height="17" rx="3" fill="#2a1840" stroke="#aa81ff" stroke-width="1.8"/>
+  <rect x="53" y="8" width="12" height="50" rx="3" fill="#c8d8e8" opacity=".8"/>
+  <rect x="46" y="4" width="26" height="8" rx="3" fill="#f1be66"/>
+  <rect x="46" y="56" width="26" height="8" rx="3" fill="#f1be66"/>
+  <path d="M12,22 L6,22 M6,22 l4,-4 M6,22 l4,4" fill="none" stroke="#e84ab8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M118,44 L124,44 M124,44 l-4,-4 M124,44 l-4,4" fill="none" stroke="#e84ab8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="148" y1="44" x2="185" y2="20" stroke="#e84ab8" stroke-width="2.2" opacity=".75"/>
+  <line x1="148" y1="20" x2="185" y2="44" stroke="#aa81ff" stroke-width="2.2" opacity=".75"/>
+  <circle cx="167" cy="32" r="5" fill="#f1be66" opacity=".9"/>
+  <text x="148" y="58" font-size="8" fill="#e84ab8" font-weight="700">VDI 2230</text>
+</svg>
+<span class="num">02</span><h3 data-en="Bolted-joint assessment" data-tr="Cıvatalı bağlantı analizi">Bolted-joint assessment</h3><p data-en="Standards-informed joint-load and capacity evaluation workflows, including VDI 2230 concepts." data-tr="VDI 2230 kavramlarını içeren, standartlara dayalı bağlantı yükü ve kapasite değerlendirme iş akışları.">Standards-informed joint-load and capacity evaluation workflows, including VDI 2230 concepts.</p>
+</article>
+
+<article class="card" style="--c:#aa81ff">
+<svg class="card-art" viewBox="0 0 200 68" aria-hidden="true">
+  <rect x="18" y="24" width="82" height="14" rx="2" fill="#1a1a40" stroke="#aa81ff" stroke-width="1.8"/>
+  <rect x="18" y="40" width="82" height="14" rx="2" fill="#0d1830" stroke="#aa81ff" stroke-width="1" opacity=".5"/>
+  <line x1="28" y1="24" x2="22" y2="38" stroke="#aa81ff" stroke-width="1" opacity=".55"/>
+  <line x1="38" y1="24" x2="32" y2="38" stroke="#aa81ff" stroke-width="1" opacity=".55"/>
+  <line x1="48" y1="24" x2="42" y2="38" stroke="#aa81ff" stroke-width="1" opacity=".55"/>
+  <line x1="58" y1="24" x2="52" y2="38" stroke="#aa81ff" stroke-width="1" opacity=".55"/>
+  <line x1="68" y1="24" x2="62" y2="38" stroke="#aa81ff" stroke-width="1" opacity=".55"/>
+  <line x1="78" y1="24" x2="72" y2="38" stroke="#aa81ff" stroke-width="1" opacity=".55"/>
+  <line x1="88" y1="24" x2="82" y2="38" stroke="#aa81ff" stroke-width="1" opacity=".55"/>
+  <path d="M108,31 L122,31 M120,27 L124,31 L120,35" fill="none" stroke="#aa81ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="128" y="26" font-size="11" fill="#aa81ff" font-weight="700">μ</text>
+  <line x1="138" y1="10" x2="138" y2="60" stroke="#243950" stroke-width="1.5"/>
+  <line x1="138" y1="60" x2="190" y2="60" stroke="#243950" stroke-width="1.5"/>
+  <path d="M140,58 Q148,32 156,38 Q165,44 174,14" fill="none" stroke="#aa81ff" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
+<span class="num">03</span><h3 data-en="Friction & tightening" data-tr="Sürtünme ve sıkma">Friction & tightening</h3><p data-en="Explore the influence of tightening parameters and friction on the torque–preload relationship." data-tr="Sıkma parametreleri ile sürtünmenin tork–ön yük ilişkisine etkisini inceleyin.">Explore the influence of tightening parameters and friction on the torque–preload relationship.</p>
+</article>
+
+<article class="card" style="--c:#f1be66">
+<svg class="card-art" viewBox="0 0 200 68" aria-hidden="true">
+  <line x1="20" y1="8" x2="20" y2="60" stroke="#3a5068" stroke-width="1.5"/>
+  <line x1="20" y1="60" x2="188" y2="60" stroke="#3a5068" stroke-width="1.5"/>
+  <line x1="20" y1="18" x2="188" y2="18" stroke="#ff8c66" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="20" y1="37" x2="188" y2="37" stroke="#f1be66" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <line x1="20" y1="56" x2="188" y2="56" stroke="#ff8c66" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <polyline points="26,44 44,36 62,40 80,28 98,36 116,32 134,42 152,26 170,34 188,30" fill="none" stroke="#4ab8e8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="152" cy="26" r="5" fill="#f1be66" stroke="#07111e" stroke-width="1.5"/>
+  <text x="22" y="17" font-size="8" fill="#ff8c66">UCL</text>
+  <text x="22" y="36" font-size="8" fill="#f1be66">CL</text>
+  <text x="22" y="55" font-size="8" fill="#ff8c66">LCL</text>
+</svg>
+<span class="num">04</span><h3 data-en="Validation & SPC" data-tr="Doğrulama ve SPC">Validation & SPC</h3><p data-en="Connect engineering targets to measurement, validation, and process monitoring." data-tr="Mühendislik hedeflerini ölçüm, doğrulama ve proses izleme ile ilişkilendirin.">Connect engineering targets to measurement, validation, and process monitoring.</p>
+</article>
+
+<article class="card" style="--c:#a6f27d">
+<svg class="card-art" viewBox="0 0 200 68" aria-hidden="true">
+  <rect x="8" y="20" width="36" height="22" rx="5" fill="#0e2a18" stroke="#a6f27d" stroke-width="2"/>
+  <text x="26" y="35" font-size="9" fill="#a6f27d" text-anchor="middle" font-weight="700">DEF</text>
+  <line x1="44" y1="31" x2="58" y2="31" stroke="#a6f27d" stroke-width="2"/>
+  <polygon points="56,27 62,31 56,35" fill="#a6f27d"/>
+  <rect x="62" y="20" width="36" height="22" rx="5" fill="#0e2a18" stroke="#a6f27d" stroke-width="2"/>
+  <text x="80" y="35" font-size="9" fill="#a6f27d" text-anchor="middle" font-weight="700">CALC</text>
+  <line x1="98" y1="31" x2="112" y2="31" stroke="#a6f27d" stroke-width="2"/>
+  <polygon points="110,27 116,31 110,35" fill="#a6f27d"/>
+  <rect x="116" y="20" width="36" height="22" rx="5" fill="#0e2a18" stroke="#a6f27d" stroke-width="2"/>
+  <text x="134" y="35" font-size="9" fill="#a6f27d" text-anchor="middle" font-weight="700">VAL</text>
+  <line x1="152" y1="31" x2="166" y2="31" stroke="#a6f27d" stroke-width="2"/>
+  <polygon points="164,27 170,31 164,35" fill="#a6f27d"/>
+  <ellipse cx="180" cy="25" rx="8" ry="4" fill="#1a3a24" stroke="#a6f27d" stroke-width="1.5"/>
+  <rect x="172" y="25" width="16" height="12" fill="#1a3a24"/>
+  <line x1="172" y1="25" x2="172" y2="37" stroke="#a6f27d" stroke-width="1.5"/>
+  <line x1="188" y1="25" x2="188" y2="37" stroke="#a6f27d" stroke-width="1.5"/>
+  <ellipse cx="180" cy="37" rx="8" ry="4" fill="#1a3a24" stroke="#a6f27d" stroke-width="1.5"/>
+  <text x="38" y="58" font-size="8" fill="#a6f27d" opacity=".65">ID · Rev · Date · User</text>
+</svg>
+<span class="num">05</span><h3 data-en="Traceability" data-tr="İzlenebilirlik">Traceability</h3><p data-en="Keep engineering context, calculations, and evaluation records organized." data-tr="Mühendislik bağlamını, hesaplamaları ve değerlendirme kayıtlarını düzenli tutun.">Keep engineering context, calculations, and evaluation records organized.</p>
+</article>
+
+<article class="card" style="--c:#ff8c66">
+<svg class="card-art" viewBox="0 0 200 68" aria-hidden="true">
+  <circle cx="60" cy="34" r="14" fill="#1a1020" stroke="#ff8c66" stroke-width="2"/>
+  <polygon points="60,24 66,28 66,40 60,44 54,40 54,28" fill="#ff8c66" opacity=".2"/>
+  <text x="60" y="38" font-size="10" fill="#ff8c66" text-anchor="middle" font-weight="900">AI</text>
+  <line x1="74" y1="26" x2="94" y2="14" stroke="#ff8c66" stroke-width="1.5" stroke-dasharray="3 3" opacity=".7"/>
+  <line x1="74" y1="34" x2="94" y2="34" stroke="#ff8c66" stroke-width="1.5" stroke-dasharray="3 3" opacity=".7"/>
+  <line x1="74" y1="42" x2="94" y2="54" stroke="#ff8c66" stroke-width="1.5" stroke-dasharray="3 3" opacity=".7"/>
+  <circle cx="100" cy="12" r="7" fill="#2a140a" stroke="#ff8c66" stroke-width="1.5"/>
+  <circle cx="100" cy="34" r="7" fill="#2a140a" stroke="#ff8c66" stroke-width="1.5"/>
+  <circle cx="100" cy="56" r="7" fill="#2a140a" stroke="#ff8c66" stroke-width="1.5"/>
+  <rect x="120" y="6" width="72" height="16" rx="4" fill="#0a1a28" stroke="#4ab8e8" stroke-width="1.5"/>
+  <text x="156" y="18" font-size="8.5" fill="#4ab8e8" text-anchor="middle" font-weight="700">DETERMINISTIC</text>
+  <rect x="120" y="46" width="72" height="16" rx="4" fill="#1a0c06" stroke="#ff8c66" stroke-width="1.5"/>
+  <text x="156" y="58" font-size="8.5" fill="#ff8c66" text-anchor="middle" font-weight="700">AI SUPPORT</text>
+  <line x1="107" y1="12" x2="120" y2="14" stroke="#4ab8e8" stroke-width="1.2" opacity=".5"/>
+  <line x1="107" y1="56" x2="120" y2="54" stroke="#ff8c66" stroke-width="1.2" opacity=".5"/>
+</svg>
+<span class="num">06</span><h3 data-en="AI-assisted knowledge" data-tr="AI destekli teknik bilgi">AI-assisted knowledge</h3><p data-en="Use AI for interpretation and support, while critical engineering formulas remain deterministic." data-tr="AI'dan yorumlama ve teknik destekte yararlanın; kritik mühendislik formülleri deterministik kalsın.">Use AI for interpretation and support, while critical engineering formulas remain deterministic.</p>
+</article>
+
 </div></div></section>
-<section class="sub" id="workflow"><div class="wrap"><span class="eyebrow" data-en="WORKFLOW" data-tr="İŞ AKIŞI">WORKFLOW</span><h2 data-en="A practical path from specification to validation." data-tr="Şartnameden doğrulamaya uzanan uygulanabilir bir süreç.">A practical path from specification to validation.</h2><div class="steps">
-<div class="step"><span class="num">01</span><h3 data-en="Define" data-tr="Tanımla">Define</h3><p data-en="Fastener, joint, loading, and friction inputs." data-tr="Bağlantı elemanı, birleşim, yükleme ve sürtünme girdileri.">Fastener, joint, loading, and friction inputs.</p></div>
-<div class="step"><span class="num">02</span><h3 data-en="Calculate" data-tr="Hesapla">Calculate</h3><p data-en="Repeatable torque, preload, and joint assessments." data-tr="Tekrarlanabilir tork, ön yük ve bağlantı değerlendirmeleri.">Repeatable torque, preload, and joint assessments.</p></div>
-<div class="step"><span class="num">03</span><h3 data-en="Evaluate" data-tr="Değerlendir">Evaluate</h3><p data-en="Review assumptions, limits, and engineering outputs." data-tr="Varsayımları, sınırları ve mühendislik sonuçlarını inceleyin.">Review assumptions, limits, and engineering outputs.</p></div>
-<div class="step"><span class="num">04</span><h3 data-en="Validate" data-tr="Doğrula">Validate</h3><p data-en="Compare with measurements and track the process." data-tr="Ölçümlerle karşılaştırın ve prosesi izleyin.">Compare with measurements and track the process.</p></div></div></div></section>
+
+<section class="sub" id="workflow"><div class="wrap">
+<span class="eyebrow" data-en="WORKFLOW" data-tr="İŞ AKIŞI">WORKFLOW</span>
+<h2 data-en="A practical path from specification to validation." data-tr="Şartnameden doğrulamaya uzanan uygulanabilir bir süreç.">A practical path from specification to validation.</h2>
+<div class="steps-flow">
+<div class="step"><div class="step-circle">01</div><h3 data-en="Define" data-tr="Tanımla">Define</h3><p data-en="Fastener, joint, loading, and friction inputs." data-tr="Bağlantı elemanı, birleşim, yükleme ve sürtünme girdileri.">Fastener, joint, loading, and friction inputs.</p></div>
+<div class="step-arr" aria-hidden="true">›</div>
+<div class="step"><div class="step-circle">02</div><h3 data-en="Calculate" data-tr="Hesapla">Calculate</h3><p data-en="Repeatable torque, preload, and joint assessments." data-tr="Tekrarlanabilir tork, ön yük ve bağlantı değerlendirmeleri.">Repeatable torque, preload, and joint assessments.</p></div>
+<div class="step-arr" aria-hidden="true">›</div>
+<div class="step"><div class="step-circle">03</div><h3 data-en="Evaluate" data-tr="Değerlendir">Evaluate</h3><p data-en="Review assumptions, limits, and engineering outputs." data-tr="Varsayımları, sınırları ve mühendislik sonuçlarını inceleyin.">Review assumptions, limits, and engineering outputs.</p></div>
+<div class="step-arr" aria-hidden="true">›</div>
+<div class="step"><div class="step-circle">04</div><h3 data-en="Validate" data-tr="Doğrula">Validate</h3><p data-en="Compare with measurements and track the process." data-tr="Ölçümlerle karşılaştırın ve prosesi izleyin.">Compare with measurements and track the process.</p></div>
+</div></div></section>
+
 <section id="applications"><div class="wrap"><span class="eyebrow" data-en="APPLICATION VIEW" data-tr="UYGULAMA GÖRÜNÜMÜ">APPLICATION VIEW</span><h2 data-en="Make the calculation understandable." data-tr="Hesaplama sonuçlarını anlaşılır kılın.">Make the calculation understandable.</h2><div class="showcase"><figure><img loading="lazy" src="./torque-recommendation.png" alt="Torque recommendation application view"><figcaption data-en="Torque recommendation example" data-tr="Tork önerisi örneği">Torque recommendation example</figcaption></figure><div><h3 data-en="Engineering results with context" data-tr="Bağlamıyla birlikte mühendislik sonuçları">Engineering results with context</h3><p class="intro" data-en="Present input assumptions and calculated outputs in an accessible interface rather than an isolated number." data-tr="Girdi varsayımlarını ve hesaplanan sonuçları tek başına bir sayı yerine anlaşılabilir bir arayüzde sunun.">Present input assumptions and calculated outputs in an accessible interface rather than an isolated number.</p><a class="btn btn-alt" href="https://torqpro-ai.onrender.com/" target="_blank" rel="noopener noreferrer" data-en="Try the demo ↗" data-tr="Demoyu deneyin ↗">Try the demo ↗</a></div></div>
 <div class="showcase" style="margin-top:50px"><div><h3>VDI 2230</h3><p class="intro" data-en="Review load-bearing and joint-design considerations using standards-informed methods and explicit assumptions." data-tr="Standartlara dayalı yöntemler ve açık varsayımlarla taşıma kapasitesi ve bağlantı tasarımı konularını değerlendirin.">Review load-bearing and joint-design considerations using standards-informed methods and explicit assumptions.</p></div><figure><img loading="lazy" src="./vdi2230-analysis.png" alt="VDI 2230 bolted joint analysis interface"><figcaption data-en="Bolted-joint analysis view" data-tr="Cıvatalı bağlantı analizi görünümü">Bolted-joint analysis view</figcaption></figure></div></div></section>
-<section class="sub" id="industries"><div class="wrap"><span class="eyebrow" data-en="INDUSTRIES" data-tr="SEKTÖRLER">INDUSTRIES</span><h2 data-en="Built for demanding engineering environments." data-tr="Zorlu mühendislik uygulamalarına yönelik.">Built for demanding engineering environments.</h2><p class="intro" data-en="Relevant to teams who specify, design, validate, manufacture, or audit critical bolted connections." data-tr="Kritik cıvatalı bağlantıları şartnamelendiren, tasarlayan, doğrulayan, üreten veya denetleyen ekipler için.">Relevant to teams who specify, design, validate, manufacture, or audit critical bolted connections.</p><div class="tags"><span class="tag" data-en="Automotive" data-tr="Otomotiv">Automotive</span><span class="tag" data-en="Defense" data-tr="Savunma">Defense</span><span class="tag" data-en="Aerospace" data-tr="Havacılık">Aerospace</span><span class="tag" data-en="Machinery" data-tr="Makine imalatı">Machinery</span><span class="tag" data-en="Supplier quality" data-tr="Tedarikçi kalitesi">Supplier quality</span><span class="tag" data-en="Industrial manufacturing" data-tr="Endüstriyel üretim">Industrial manufacturing</span></div></div></section>
-<section class="sub" id="engineering-scope"><div class="wrap"><span class="eyebrow" data-en="ENGINEERING DEPTH · TORQPRO AI v3.4.0" data-tr="MÜHENDİSLİK DERİNLİĞİ · TORQPRO AI v3.4.0">ENGINEERING DEPTH · TORQPRO AI v3.4.0</span><h2 data-en="Engineering results, with the limits made clear." data-tr="Sınırları açıkça belirtilen mühendislik sonuçları.">Engineering results, with the limits made clear.</h2><p class="intro" data-en="Discover bolted-joint compliance, bolt and clamped-part stiffness, separation safety, residual clamp force and average contact pressure—along with declared scope limitations from the application documentation." data-tr="Bağlantı esnekliği, cıvata ve bağlanan parça rijitliği, ayrılma emniyeti, kalan sıkma kuvveti ve ortalama temas basıncını; uygulama dokümantasyonundaki kapsam sınırlarıyla birlikte keşfedin.">Discover bolted-joint compliance, bolt and clamped-part stiffness, separation safety, residual clamp force and average contact pressure—along with declared scope limitations from the application documentation.</p><div class="grid"><article class="card"><span class="num">VDI 2230</span><h3 data-en="Stiffness & load sharing" data-tr="Rijitlik ve yük paylaşımı">Stiffness & load sharing</h3><p data-en="Bolt/plate compliance and external-load distribution." data-tr="Cıvata/parça esnekliği ve dış yük dağılımı.">Bolt/plate compliance and external-load distribution.</p></article><article class="card"><span class="num">SAFETY</span><h3 data-en="Separation & clamp force" data-tr="Ayrılma ve sıkma kuvveti">Separation & clamp force</h3><p data-en="Residual clamp force and separation-limit evaluation." data-tr="Kalan sıkma kuvveti ve ayrılma sınırı değerlendirmesi.">Residual clamp force and separation-limit evaluation.</p></article><article class="card"><span class="num">SCOPE</span><h3 data-en="Transparent assumptions" data-tr="Şeffaf varsayımlar">Transparent assumptions</h3><p data-en="Axial stress is not a full reduced-stress check; average contact pressure is not an FEA distribution." data-tr="Eksenel gerilme tam indirgenmiş gerilme kontrolü değildir; ortalama temas basıncı FEA dağılımı değildir.">Axial stress is not a full reduced-stress check; average contact pressure is not an FEA distribution.</p></article></div><div class="actions"><a class="btn btn-main" href="./engineering.html#verified-scope" data-en="Explore engineering scope ↗" data-tr="Mühendislik kapsamını keşfet ↗">Explore engineering scope ↗</a><a class="btn btn-alt" href="https://github.com/Bursa-16/TorqPro-AI/blob/main/README.md" target="_blank" rel="noopener noreferrer" data-en="Technical source ↗" data-tr="Teknik kaynak ↗">Technical source ↗</a></div></div></section>
+
+<section class="sub" id="industries"><div class="wrap">
+<span class="eyebrow" data-en="INDUSTRIES" data-tr="SEKTÖRLER">INDUSTRIES</span>
+<h2 data-en="Built for demanding engineering environments." data-tr="Zorlu mühendislik uygulamalarına yönelik.">Built for demanding engineering environments.</h2>
+<p class="intro" data-en="Relevant to teams who specify, design, validate, manufacture, or audit critical bolted connections." data-tr="Kritik cıvatalı bağlantıları şartnamelendiren, tasarlayan, doğrulayan, üreten veya denetleyen ekipler için.">Relevant to teams who specify, design, validate, manufacture, or audit critical bolted connections.</p>
+<div class="ind-grid">
+
+<div class="ind-card">
+<svg class="ind-icon" viewBox="0 0 44 44" aria-hidden="true">
+  <circle cx="22" cy="22" r="10" fill="none" stroke="#4ab8e8" stroke-width="2.5"/>
+  <circle cx="22" cy="22" r="4" fill="#4ab8e8" opacity=".5"/>
+  <line x1="22" y1="8" x2="22" y2="13" stroke="#4ab8e8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="22" y1="31" x2="22" y2="36" stroke="#4ab8e8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8" y1="22" x2="13" y2="22" stroke="#4ab8e8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="31" y1="22" x2="36" y2="22" stroke="#4ab8e8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="12" y1="12" x2="16" y2="16" stroke="#4ab8e8" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="28" y1="28" x2="32" y2="32" stroke="#4ab8e8" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+<div><div class="ind-label" data-en="Automotive" data-tr="Otomotiv">Automotive</div><div class="ind-sub" data-en="Powertrain, chassis, assembly" data-tr="Aktarma organları, şasi, montaj">Powertrain, chassis, assembly</div></div>
+</div>
+
+<div class="ind-card">
+<svg class="ind-icon" viewBox="0 0 44 44" aria-hidden="true">
+  <polygon points="22,6 38,16 38,32 22,38 6,32 6,16" fill="none" stroke="#e84ab8" stroke-width="2.5"/>
+  <polygon points="22,14 30,19 30,29 22,33 14,29 14,19" fill="none" stroke="#e84ab8" stroke-width="1.5" opacity=".5"/>
+  <circle cx="22" cy="24" r="3.5" fill="#e84ab8" opacity=".8"/>
+</svg>
+<div><div class="ind-label" data-en="Defense" data-tr="Savunma">Defense</div><div class="ind-sub" data-en="Critical fastener compliance" data-tr="Kritik bağlantı uygunluğu">Critical fastener compliance</div></div>
+</div>
+
+<div class="ind-card">
+<svg class="ind-icon" viewBox="0 0 44 44" aria-hidden="true">
+  <path d="M8,34 Q14,10 36,18" fill="none" stroke="#aa81ff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M8,34 L15,30 L13,38 Z" fill="#aa81ff" opacity=".75"/>
+  <circle cx="36" cy="18" r="5" fill="none" stroke="#aa81ff" stroke-width="2"/>
+  <line x1="22" y1="24" x2="22" y2="40" stroke="#aa81ff" stroke-width="1.5" stroke-dasharray="3 3" opacity=".5"/>
+</svg>
+<div><div class="ind-label" data-en="Aerospace" data-tr="Havacılık">Aerospace</div><div class="ind-sub" data-en="Structural integrity, traceability" data-tr="Yapısal bütünlük, izlenebilirlik">Structural integrity, traceability</div></div>
+</div>
+
+<div class="ind-card">
+<svg class="ind-icon" viewBox="0 0 44 44" aria-hidden="true">
+  <circle cx="22" cy="22" r="7" fill="none" stroke="#f1be66" stroke-width="2.5"/>
+  <circle cx="22" cy="22" r="3" fill="#f1be66" opacity=".5"/>
+  <rect x="20" y="5" width="4" height="7" rx="2" fill="#f1be66"/>
+  <rect x="20" y="32" width="4" height="7" rx="2" fill="#f1be66"/>
+  <rect x="5" y="20" width="7" height="4" rx="2" fill="#f1be66"/>
+  <rect x="32" y="20" width="7" height="4" rx="2" fill="#f1be66"/>
+  <rect x="10" y="9" width="4" height="6" rx="2" fill="#f1be66" transform="rotate(45 12 12)"/>
+  <rect x="28" y="9" width="4" height="6" rx="2" fill="#f1be66" transform="rotate(-45 30 12)"/>
+  <rect x="9" y="28" width="4" height="6" rx="2" fill="#f1be66" transform="rotate(-45 11 31)"/>
+  <rect x="28" y="28" width="4" height="6" rx="2" fill="#f1be66" transform="rotate(45 30 31)"/>
+</svg>
+<div><div class="ind-label" data-en="Machinery" data-tr="Makine imalatı">Machinery</div><div class="ind-sub" data-en="Equipment design, validation" data-tr="Ekipman tasarımı, doğrulama">Equipment design, validation</div></div>
+</div>
+
+<div class="ind-card">
+<svg class="ind-icon" viewBox="0 0 44 44" aria-hidden="true">
+  <circle cx="22" cy="22" r="16" fill="none" stroke="#a6f27d" stroke-width="2.2"/>
+  <polyline points="13,22 19,28 31,16" fill="none" stroke="#a6f27d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<div><div class="ind-label" data-en="Supplier quality" data-tr="Tedarikçi kalitesi">Supplier quality</div><div class="ind-sub" data-en="Audit, SPC, capability" data-tr="Denetim, SPC, yeterlilik">Audit, SPC, capability</div></div>
+</div>
+
+<div class="ind-card">
+<svg class="ind-icon" viewBox="0 0 44 44" aria-hidden="true">
+  <rect x="6" y="26" width="32" height="12" rx="2" fill="none" stroke="#ff8c66" stroke-width="2"/>
+  <rect x="10" y="18" width="8" height="8" fill="none" stroke="#ff8c66" stroke-width="1.5"/>
+  <rect x="26" y="18" width="8" height="8" fill="none" stroke="#ff8c66" stroke-width="1.5"/>
+  <line x1="18" y1="26" x2="18" y2="18" stroke="#ff8c66" stroke-width="1.5"/>
+  <line x1="26" y1="26" x2="26" y2="18" stroke="#ff8c66" stroke-width="1.5"/>
+  <rect x="15" y="10" width="4" height="8" rx="1" fill="none" stroke="#ff8c66" stroke-width="1.5"/>
+  <rect x="10" y="30" width="5" height="5" rx="1" fill="#ff8c66" opacity=".3"/>
+  <rect x="20" y="30" width="5" height="5" rx="1" fill="#ff8c66" opacity=".3"/>
+  <rect x="30" y="30" width="5" height="5" rx="1" fill="#ff8c66" opacity=".3"/>
+</svg>
+<div><div class="ind-label" data-en="Industrial manufacturing" data-tr="Endüstriyel üretim">Industrial manufacturing</div><div class="ind-sub" data-en="Process control, SPC" data-tr="Proses kontrolü, SPC">Process control, SPC</div></div>
+</div>
+
+</div></div></section>
+
+<section class="sub" id="engineering-scope"><div class="wrap">
+<span class="eyebrow" data-en="ENGINEERING DEPTH · TORQPRO AI v3.4.0" data-tr="MÜHENDİSLİK DERİNLİĞİ · TORQPRO AI v3.4.0">ENGINEERING DEPTH · TORQPRO AI v3.4.0</span>
+<h2 data-en="Engineering results, with the limits made clear." data-tr="Sınırları açıkça belirtilen mühendislik sonuçları.">Engineering results, with the limits made clear.</h2>
+<p class="intro" data-en="Discover bolted-joint compliance, bolt and clamped-part stiffness, separation safety, residual clamp force and average contact pressure—along with declared scope limitations from the application documentation." data-tr="Bağlantı esnekliği, cıvata ve bağlanan parça rijitliği, ayrılma emniyeti, kalan sıkma kuvveti ve ortalama temas basıncını; uygulama dokümantasyonundaki kapsam sınırlarıyla birlikte keşfedin.">Discover bolted-joint compliance, bolt and clamped-part stiffness, separation safety, residual clamp force and average contact pressure—along with declared scope limitations from the application documentation.</p>
+<div class="grid">
+<article class="card" style="--c:#4ab8e8"><span class="num">VDI 2230</span><h3 data-en="Stiffness & load sharing" data-tr="Rijitlik ve yük paylaşımı">Stiffness & load sharing</h3><p data-en="Bolt/plate compliance and external-load distribution." data-tr="Cıvata/parça esnekliği ve dış yük dağılımı.">Bolt/plate compliance and external-load distribution.</p></article>
+<article class="card" style="--c:#f1be66"><span class="num">SAFETY</span><h3 data-en="Separation & clamp force" data-tr="Ayrılma ve sıkma kuvveti">Separation & clamp force</h3><p data-en="Residual clamp force and separation-limit evaluation." data-tr="Kalan sıkma kuvveti ve ayrılma sınırı değerlendirmesi.">Residual clamp force and separation-limit evaluation.</p></article>
+<article class="card" style="--c:#aa81ff"><span class="num">SCOPE</span><h3 data-en="Transparent assumptions" data-tr="Şeffaf varsayımlar">Transparent assumptions</h3><p data-en="Axial stress is not a full reduced-stress check; average contact pressure is not an FEA distribution." data-tr="Eksenel gerilme tam indirgenmiş gerilme kontrolü değildir; ortalama temas basıncı FEA dağılımı değildir.">Axial stress is not a full reduced-stress check; average contact pressure is not an FEA distribution.</p></article>
+</div>
+<div class="actions"><a class="btn btn-main" href="./engineering.html#verified-scope" data-en="Explore engineering scope ↗" data-tr="Mühendislik kapsamını keşfet ↗">Explore engineering scope ↗</a><a class="btn btn-alt" href="https://github.com/Bursa-16/TorqPro-AI/blob/main/README.md" target="_blank" rel="noopener noreferrer" data-en="Technical source ↗" data-tr="Teknik kaynak ↗">Technical source ↗</a></div>
+</div></section>
+
 <section id="research"><div class="wrap"><span class="eyebrow" data-en="METHODOLOGY" data-tr="METODOLOJİ">METHODOLOGY</span><h2 data-en="Standards-informed. Evidence-oriented." data-tr="Standartları temel alan, kanıt odaklı.">Standards-informed. Evidence-oriented.</h2><p class="intro" data-en="The engineering workflow draws on recognized frameworks including VDI 2230, ISO 16047, and ISO 2320. References do not imply certification or verified compliance of every feature; users must validate calculations for their application." data-tr="Mühendislik iş akışında VDI 2230, ISO 16047 ve ISO 2320 gibi tanınmış çerçeveler dikkate alınır. Referanslar, tüm özellikler için sertifikasyon veya doğrulanmış tam uygunluk anlamına gelmez; kullanıcılar hesaplamaları kendi uygulamalarına göre doğrulamalıdır.">The engineering workflow draws on recognized frameworks including VDI 2230, ISO 16047, and ISO 2320. References do not imply certification or verified compliance of every feature; users must validate calculations for their application.</p><a class="btn btn-alt" href="https://doi.org/10.5281/zenodo.22873032" target="_blank" rel="noopener noreferrer" data-en="Explore research reference ↗" data-tr="Bilimsel referansı incele ↗">Explore research reference ↗</a></div></section>
+
 <section class="sub" id="contact"><div class="wrap"><div class="banner"><span class="eyebrow" data-en="GET STARTED" data-tr="HEMEN BAŞLAYIN">GET STARTED</span><h2 data-en="Explore TorqPro AI in action." data-tr="TorqPro AI'ı uygulamada keşfedin.">Explore TorqPro AI in action.</h2><p class="intro" data-en="Try the live platform or discuss a workflow tailored to your engineering requirements." data-tr="Canlı platformu deneyin veya mühendislik ihtiyaçlarınıza özel bir iş akışını görüşün.">Try the live platform or discuss a workflow tailored to your engineering requirements.</p><div class="actions"><a class="btn btn-main" href="https://torqpro-ai.onrender.com/" target="_blank" rel="noopener noreferrer" data-en="Launch TorqPro AI ↗" data-tr="TorqPro AI'ı aç ↗">Launch TorqPro AI ↗</a><a class="btn btn-alt" href="mailto:sophoryx0@gmail.com?subject=TorqPro%20AI%20Inquiry" data-en="Contact the team" data-tr="Ekiple iletişime geç">Contact the team</a></div></div></div></section>
-</main><footer><div class="wrap footer-row"><span>© 2026 TorqPro AI</span><span data-en="Engineering calculations require application-specific verification." data-tr="Mühendislik hesaplamaları uygulamaya özel doğrulama gerektirir.">Engineering calculations require application-specific verification.</span></div></footer>
+</main>
+<footer><div class="wrap footer-row"><span>© 2026 TorqPro AI</span><span data-en="Engineering calculations require application-specific verification." data-tr="Mühendislik hesaplamaları uygulamaya özel doğrulama gerektirir.">Engineering calculations require application-specific verification.</span></div></footer>
 <script>
 (()=>{const buttons=[...document.querySelectorAll('[data-lang]')];const toggle=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav-links');
 function setLang(lang){if(!['tr','en'].includes(lang))lang='en';document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-tr]').forEach(el=>{if(el.tagName==='H1')el.innerHTML=el.dataset[lang];else el.textContent=el.dataset[lang]});buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));document.title=lang==='tr'?'TorqPro AI | Kritik Cıvatalı Bağlantılar için Hassas Mühendislik':'TorqPro AI | Precision Engineering for Bolted Joints';try{localStorage.setItem('torqpro-language',lang)}catch(_){}}
