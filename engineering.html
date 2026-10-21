@@ -4,17 +4,64 @@
 <title>Engineering Solutions | TorqPro AI</title>
 <style>
 :root{color-scheme:dark;--bg:#090e24;--text:#f5f7ff;--muted:#b4c1dd;--cyan:#2edbff;--pink:#ff51ad;--violet:#aa81ff;--gold:#ffd166;--lime:#a6f27d}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;background:radial-gradient(ellipse at 82% 0%,#4e208e9c,transparent 35%),radial-gradient(ellipse at 10% 35%,#06456d81,transparent 35%),var(--bg)}a{color:inherit}button{font:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #ffd166;outline-offset:4px}.card{transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-5px);border-color:var(--c)}nav{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;padding-bottom:24px}nav a{text-decoration:none}.links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.links a{color:#c7d4ff}.brand{display:flex;align-items:center}.brand img{height:46px;width:auto;max-width:175px;object-fit:contain}.language{display:flex;gap:5px}.language button{background:#202c52;color:#d9e5ff;border:1px solid #485b86;border-radius:8px;cursor:pointer;padding:6px 10px}.language button[aria-pressed=true]{background:var(--cyan);color:#071026}h1{font-size:clamp(42px,6.5vw,83px);letter-spacing:-.065em;line-height:1.04;margin:22px 0}h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;line-height:1.17}.gradient{background:linear-gradient(94deg,var(--cyan),var(--pink) 65%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}.eyebrow{font-size:12px;letter-spacing:.19em;font-weight:900;color:var(--cyan)}.hero{padding:75px 0 55px}.lead{color:var(--muted);max-width:820px;font-size:19px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}.btn{display:inline-flex;text-decoration:none;padding:13px 20px;border:1px solid #6272a1;border-radius:12px;background:#19274a;font-weight:800}.btn.main{background:linear-gradient(95deg,var(--cyan),#ab87ff);color:#0a1225;border:none}.chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}.chips span{padding:7px 13px;border-radius:40px;border:1px solid #5b659a;background:#17234a;color:#dce8ff;font-size:13px}section{padding:58px 0}.chartpanel{padding:24px;border-radius:24px;border:1px solid #536ba3;background:linear-gradient(130deg,#182449,#10172e);box-shadow:0 20px 80px #0006,0 0 0 1px #2edbff14}.btn-on{background:#1e4f7a!important;border-color:#2edbff!important;box-shadow:0 0 16px #2edbff35!important}.chart-header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.chart-header h2{margin:8px 0}.illustration{font-size:12px;color:var(--gold);border:1px solid #97783d;border-radius:20px;padding:7px 10px}.plot{width:100%;height:auto;display:block;margin:15px 0}.plot text{font:12px system-ui;fill:#bac7ec}.sliders{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.sliders label{display:block;font-weight:750}.sliders output{color:var(--cyan)}input[type=range]{width:100%;accent-color:var(--pink)}.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.readout div{background:#0d1832;border-radius:12px;padding:14px}.readout strong{display:block;font-size:clamp(17px,3vw,27px);color:var(--gold)}.note{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{position:relative;overflow:hidden;min-height:220px;background:linear-gradient(140deg,#172447,#10192f);border:1px solid #485782;border-radius:20px;padding:24px}.card:before{content:"";height:5px;background:var(--c);position:absolute;top:0;left:0;right:0}.card small{color:var(--c);font-weight:900;letter-spacing:.14em}.card h3{font-size:22px;line-height:1.2;margin:17px 0 9px}.card p{color:var(--muted);margin:0}.caption{font-size:13px;color:#b4c2db}.warning{border:1px solid #5b6590;border-radius:16px;padding:24px;background:#131e39}.warning p{color:var(--muted)}footer{margin-top:65px;border-top:1px solid #405073;padding:28px 0;color:var(--muted);font-size:13px}.menu-toggle{display:none;background:none;border:1px solid #485b86;color:#d9e5ff;border-radius:8px;padding:7px 12px;cursor:pointer}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;background:radial-gradient(ellipse at 82% 0%,#4e208e9c,transparent 35%),radial-gradient(ellipse at 10% 35%,#06456d81,transparent 35%),var(--bg)}a{color:inherit}button{font:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #ffd166;outline-offset:4px}.card{transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-5px);border-color:var(--c)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;padding-bottom:24px}nav a{text-decoration:none}.links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.links a{color:#c7d4ff}.brand{display:flex;align-items:center}.brand img{height:46px;width:auto;max-width:175px;object-fit:contain}.language{display:flex;gap:5px}.language button{background:#202c52;color:#d9e5ff;border:1px solid #485b86;border-radius:8px;cursor:pointer;padding:6px 10px}.language button[aria-pressed=true]{background:var(--cyan);color:#071026}
+h1{font-size:clamp(42px,6.5vw,83px);letter-spacing:-.065em;line-height:1.04;margin:22px 0}h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em;line-height:1.17}.gradient{background:linear-gradient(94deg,var(--cyan),var(--pink) 65%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}.eyebrow{font-size:12px;letter-spacing:.19em;font-weight:900;color:var(--cyan)}.hero{padding:75px 0 55px}.lead{color:var(--muted);max-width:820px;font-size:19px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+.btn{display:inline-flex;text-decoration:none;padding:13px 20px;border:1px solid #6272a1;border-radius:12px;background:#19274a;font-weight:800}.btn.main{background:linear-gradient(95deg,var(--cyan),#ab87ff);color:#0a1225;border:none}.btn-on{background:#1e4f7a!important;border-color:#2edbff!important;box-shadow:0 0 16px #2edbff35!important}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}.chips span{padding:7px 13px;border-radius:40px;border:1px solid #5b659a;background:#17234a;color:#dce8ff;font-size:13px}section{padding:58px 0}
+.chartpanel{padding:24px;border-radius:24px;border:1px solid #536ba3;background:linear-gradient(130deg,#182449,#10172e);box-shadow:0 20px 80px #0006,0 0 0 1px #2edbff14}.chart-header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.chart-header h2{margin:8px 0}.illustration{font-size:12px;color:var(--gold);border:1px solid #97783d;border-radius:20px;padding:7px 10px}
+.plot{width:100%;height:auto;display:block;margin:15px 0}.plot text{font:12px system-ui;fill:#bac7ec}.sliders{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}.sliders label{display:block;font-weight:750}.sliders output{color:var(--cyan)}input[type=range]{width:100%;accent-color:var(--pink)}
+.readout{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.readout div{background:#0d1832;border-radius:12px;padding:14px}.readout strong{display:block;font-size:clamp(17px,3vw,27px);color:var(--gold)}.note{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{position:relative;overflow:hidden;min-height:220px;background:linear-gradient(140deg,#172447,#10192f);border:1px solid #485782;border-radius:20px;padding:24px}.card:before{content:"";height:5px;background:var(--c);position:absolute;top:0;left:0;right:0}.card small{color:var(--c);font-weight:900;letter-spacing:.14em}.card h3{font-size:22px;line-height:1.2;margin:17px 0 9px}.card p{color:var(--muted);margin:0}
+.caption{font-size:13px;color:#b4c2db}.warning{border:1px solid #5b6590;border-radius:16px;padding:24px;background:#131e39}.warning p{color:var(--muted)}footer{margin-top:65px;border-top:1px solid #405073;padding:28px 0;color:var(--muted);font-size:13px}.menu-toggle{display:none;background:none;border:1px solid #485b86;color:#d9e5ff;border-radius:8px;padding:7px 12px;cursor:pointer}
 @media(max-width:850px){#tightening-story .chartpanel{grid-template-columns:1fr!important}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.grid,.sliders,.readout{grid-template-columns:1fr}.hero{padding-top:40px}.chartpanel{padding:15px}nav{gap:12px}h1{font-size:46px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none}}@media(max-width:880px){.menu-toggle{display:block}nav{flex-wrap:wrap}.links{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;padding-top:14px;border-top:1px solid #2e3d5e}.links.open{display:flex}}
 </style></head>
-<body><nav class="wrap"><a class="brand" href="./index.html" aria-label="TorqPro AI home"><img src="./torqpro-ai-logo3.png" alt="TorqPro AI"></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="eng-links" data-en="Menu" data-tr="Menü">Menu</button><div class="links" id="eng-links"><a href="./index.html" data-en="Home" data-tr="Ana sayfa">Home</a><a href="#modules" data-en="Modules" data-tr="Modüller">Modules</a><a href="https://torqpro-ai.onrender.com/" target="_blank" rel="noopener noreferrer" data-en="Live demo ↗" data-tr="Canlı demo ↗">Live demo ↗</a><div class="language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="tr" aria-pressed="false">TR</button></div></div></nav>
+<body>
+<nav class="wrap"><a class="brand" href="./index.html" aria-label="TorqPro AI home"><img src="./torqpro-ai-logo3.png" alt="TorqPro AI"></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="eng-links" data-en="Menu" data-tr="Menü">Menu</button><div class="links" id="eng-links"><a href="./index.html" data-en="Home" data-tr="Ana sayfa">Home</a><a href="#modules" data-en="Modules" data-tr="Modüller">Modules</a><a href="https://torqpro-ai.onrender.com/" target="_blank" rel="noopener noreferrer" data-en="Live demo ↗" data-tr="Canlı demo ↗">Live demo ↗</a><div class="language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="tr" aria-pressed="false">TR</button></div></div></nav>
 <main>
 <header class="wrap hero"><span class="eyebrow" data-en="ENGINEERING SOLUTIONS / CAPABILITIES" data-tr="MÜHENDİSLİK ÇÖZÜMLERİ / YETKİNLİKLER">ENGINEERING SOLUTIONS / CAPABILITIES</span><h1 data-en="Engineering clarity.<br><span class='gradient'>Visual impact.</span>" data-tr="Mühendislik netliği.<br><span class='gradient'>Görsel etki.</span>">Engineering clarity.<br><span class="gradient">Visual impact.</span></h1><p class="lead" data-en="Discover torque and preload engineering, joint analysis, process validation and traceability. Explore key concepts through vivid technical visuals." data-tr="Tork ve ön yük mühendisliği, bağlantı analizi, proses doğrulama ve izlenebilirlik alanlarını keşfedin. Temel kavramları renkli teknik görsellerle inceleyin.">Discover torque and preload engineering, joint analysis, process validation and traceability. Explore key concepts through vivid technical visuals.</p><div class="actions"><a class="btn main" href="https://torqpro-ai.onrender.com/" target="_blank" rel="noopener noreferrer" data-en="Launch engineering demo ↗" data-tr="Mühendislik demosunu aç ↗">Launch engineering demo ↗</a><a class="btn" href="#modules" data-en="Explore engineering modules" data-tr="Mühendislik modüllerini incele">Explore engineering modules</a></div><div class="chips"><span>VDI 2230</span><span>ISO 16047</span><span>ISO 2320</span><span data-en="Deterministic calculations" data-tr="Deterministik hesaplamalar">Deterministic calculations</span><span data-en="Engineering validation" data-tr="Mühendislik doğrulaması">Engineering validation</span></div></header>
-<section class="wrap"><div class="chartpanel"><div class="chart-header"><div><span class="eyebrow" data-en="INTERACTIVE ENGINEERING VISUAL" data-tr="ETKİLEŞİMLİ MÜHENDİSLİK GÖRSELİ">INTERACTIVE ENGINEERING VISUAL</span><h2 data-en="Torque ↔ Preload" data-tr="Tork ↔ Ön Yük">Torque ↔ Preload</h2></div><span class="illustration" data-en="ILLUSTRATIVE MODEL · NOT VALIDATED" data-tr="TEMSiLİ MODEL · DOĞRULANMAMIŞ">ILLUSTRATIVE MODEL · NOT VALIDATED</span></div>
+
+<!-- INTERACTIVE CHART -->
+<section class="wrap"><div class="chartpanel">
+<div class="chart-header">
+  <div><span class="eyebrow" data-en="INTERACTIVE ENGINEERING VISUAL" data-tr="ETKİLEŞİMLİ MÜHENDİSLİK GÖRSELİ">INTERACTIVE ENGINEERING VISUAL</span><h2 data-en="Torque ↔ Preload" data-tr="Tork ↔ Ön Yük">Torque ↔ Preload</h2></div>
+  <span class="illustration" data-en="ILLUSTRATIVE MODEL · NOT VALIDATED" data-tr="TEMSiLİ MODEL · DOĞRULANMAMIŞ">ILLUSTRATIVE MODEL · NOT VALIDATED</span>
+</div>
 <p class="note" data-en="Explore the simplified T = K × F × d relationship. This example is educational, not a TorqPro AI validation output or a production tightening recommendation." data-tr="Basitleştirilmiş T = K × F × d ilişkisini inceleyin. Bu örnek eğitseldir; TorqPro AI doğrulama sonucu veya üretim sıkma önerisi değildir.">Explore the simplified T = K × F × d relationship. This example is educational, not a TorqPro AI validation output or a production tightening recommendation.</p>
-<svg class="plot" id="plot" role="img" aria-label="Illustrative relationship between torque and preload" viewBox="0 0 900 360"><defs><linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#2edbff"/><stop offset="1" stop-color="#ff51ad"/></linearGradient></defs><g id="plot-grid"></g><path id="trace" fill="none" stroke="url(#line)" stroke-width="5" stroke-linecap="round"/><circle id="point" r="8" fill="#ffd166" stroke="#ffffff" stroke-width="2"/><text x="10" y="24" data-en="Preload (kN)" data-tr="Ön yük (kN)">Preload (kN)</text><text x="735" y="350" data-en="Torque (N·m)" data-tr="Tork (N·m)">Torque (N·m)</text></svg>
-<div class="sliders"><div><label for="torque" data-en="Applied torque" data-tr="Uygulanan tork">Applied torque</label><input id="torque" type="range" min="10" max="150" step="1" value="60"><output id="torque-val">60 N·m</output></div><div><label for="factor" data-en="Illustrative nut factor K" data-tr="Temsili somun faktörü K">Illustrative nut factor K</label><input id="factor" type="range" min="0.12" max="0.30" step="0.01" value="0.20"><output id="factor-val">0.20</output></div></div>
-<div class="readout"><div><span data-en="Torque" data-tr="Tork">Torque</span><strong id="metric-torque">60 N·m</strong></div><div><span data-en="Estimated preload" data-tr="Tahmini ön yük">Estimated preload</span><strong id="metric-preload">25.0 kN</strong></div><div><span data-en="Assumed diameter" data-tr="Varsayılan çap">Assumed diameter</span><strong>12 mm</strong></div></div></div></section>
+<svg class="plot" id="plot" role="img" aria-label="Illustrative relationship between torque and preload" viewBox="0 0 900 380">
+  <defs>
+    <linearGradient id="line-grad" x1="0" x2="1"><stop offset="0" stop-color="#2edbff"/><stop offset="1" stop-color="#ff51ad"/></linearGradient>
+    <linearGradient id="band-grad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2edbff" stop-opacity=".12"/><stop offset="1" stop-color="#2edbff" stop-opacity=".03"/></linearGradient>
+  </defs>
+  <!-- K-factor uncertainty band (shown as background region) -->
+  <path id="kband" fill="url(#band-grad)"/>
+  <g id="plot-grid"></g>
+  <!-- Formula annotation -->
+  <text x="500" y="72" font-size="13" fill="#2edbff" opacity=".55" font-style="italic">T = K · F · d</text>
+  <text x="500" y="90" font-size="11" fill="#aec1d2" opacity=".45">d = 12 mm (fixed)</text>
+  <!-- K range note -->
+  <text id="k-range-note" x="500" y="110" font-size="11" fill="#ffd166" opacity=".6"></text>
+  <path id="trace" fill="none" stroke="url(#line-grad)" stroke-width="5" stroke-linecap="round"/>
+  <circle id="point" r="9" fill="#ffd166" stroke="#ffffff" stroke-width="2"/>
+  <!-- Axis labels -->
+  <text x="12" y="24" data-en="Preload (kN)" data-tr="Ön yük (kN)">Preload (kN)</text>
+  <text x="730" y="344" data-en="Torque (N·m)" data-tr="Tork (N·m)">Torque (N·m)</text>
+  <!-- Axis arrows -->
+  <path d="M65 44V20M59 28l6-8 6 8" fill="none" stroke="#455075" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M795 304H819M811 298l8 6-8 6" fill="none" stroke="#455075" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+<div class="sliders">
+  <div><label for="torque" data-en="Applied torque" data-tr="Uygulanan tork">Applied torque</label><input id="torque" type="range" min="10" max="150" step="1" value="60"><output id="torque-val">60 N·m</output></div>
+  <div><label for="factor" data-en="Illustrative nut factor K" data-tr="Temsili somun faktörü K">Illustrative nut factor K</label><input id="factor" type="range" min="0.12" max="0.30" step="0.01" value="0.20"><output id="factor-val">0.20</output></div>
+</div>
+<div class="readout">
+  <div><span data-en="Torque" data-tr="Tork">Torque</span><strong id="metric-torque">60 N·m</strong></div>
+  <div><span data-en="Estimated preload" data-tr="Tahmini ön yük">Estimated preload</span><strong id="metric-preload">25.0 kN</strong></div>
+  <div><span data-en="Assumed diameter" data-tr="Varsayılan çap">Assumed diameter</span><strong>12 mm</strong></div>
+</div>
+</div></section>
+
+<!-- MODULE PORTFOLIO -->
 <section class="wrap" id="modules"><span class="eyebrow" data-en="ENGINEERING PORTFOLIO" data-tr="MÜHENDİSLİK PORTFÖYÜ">ENGINEERING PORTFOLIO</span><h2 data-en="Explore the engineering landscape." data-tr="Mühendislik yetkinliklerini keşfedin.">Explore the engineering landscape.</h2><p class="lead" data-en="Capability areas for product discovery. Individual feature availability and validation status must be checked in the live application." data-tr="Ürünü keşfetmek için yetkinlik alanları. Her özelliğin kullanılabilirlik ve doğrulama durumu canlı uygulamadan kontrol edilmelidir.">Capability areas for product discovery. Individual feature availability and validation status must be checked in the live application.</p>
 <div class="grid">
 <article class="card" style="--c:#2edbff"><small>01 / CORE</small><h3 data-en="Torque & Preload" data-tr="Tork ve Ön Yük">Torque & Preload</h3><p data-en="Fastener loads, tightening torque, friction and preload relationships." data-tr="Bağlantı yükleri, sıkma torku, sürtünme ve ön yük ilişkileri.">Fastener loads, tightening torque, friction and preload relationships.</p></article>
@@ -24,41 +71,335 @@
 <article class="card" style="--c:#aa81ff"><small>05 / TRACE</small><h3 data-en="Tool Tracking" data-tr="Sıkma Ekipmanı Takibi">Tool Tracking</h3><p data-en="Engineering context, tightening tool data and process traceability." data-tr="Mühendislik bağlamı, sıkma ekipmanı verileri ve proses izlenebilirliği.">Engineering context, tightening tool data and process traceability.</p></article>
 <article class="card" style="--c:#ff8c66"><small>06 / KNOWLEDGE</small><h3 data-en="AI Engineering Knowledge" data-tr="AI Mühendislik Bilgisi">AI Engineering Knowledge</h3><p data-en="Explanations and technical guidance separate from deterministic core calculations." data-tr="Deterministik temel hesaplamalardan ayrı teknik açıklamalar ve rehberlik.">Explanations and technical guidance separate from deterministic core calculations.</p></article>
 </div></section>
+
+<!-- TIGHTENING STORY -->
 <section class="wrap" id="tightening-story"><span class="eyebrow" data-en="ANIMATED ENGINEERING STORY" data-tr="ANİMASYONLU MÜHENDİSLİK ANLATIMI">ANIMATED ENGINEERING STORY</span><h2 data-en="From rotation to clamping force." data-tr="Dönmeden sıkma kuvvetine.">From rotation to clamping force.</h2><p class="lead" data-en="Follow a simplified tightening sequence. A conceptual illustration, not a mechanical simulation or validated calculation." data-tr="Basitleştirilmiş sıkma sırasını izleyin. Bu bir kavramsal gösterimdir; mekanik simülasyon veya doğrulanmış hesaplama değildir.">Follow a simplified tightening sequence. A conceptual illustration, not a mechanical simulation or validated calculation.</p>
 <div class="chartpanel" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:25px;align-items:center">
-<div><svg id="tightening-svg" viewBox="0 0 420 340" role="img" aria-label="Illustration of bolt tightening stages" style="width:100%;max-height:340px"><defs><linearGradient id="metal" x1="0" x2="1"><stop offset="0" stop-color="#95c7e6"/><stop offset=".5" stop-color="#f2f8ff"/><stop offset="1" stop-color="#6488be"/></linearGradient></defs>
-<rect x="65" y="140" width="290" height="52" rx="7" fill="#174765" stroke="#2edbff" stroke-width="3"/><rect x="65" y="196" width="290" height="51" rx="7" fill="#483575" stroke="#aa81ff" stroke-width="3"/><rect x="194" y="112" width="33" height="165" rx="5" fill="url(#metal)"/><g stroke="#6488be" stroke-width="1" opacity=".38"><line x1="196" y1="122" x2="225" y2="122"/><line x1="196" y1="132" x2="225" y2="132"/><line x1="196" y1="142" x2="225" y2="142"/><line x1="196" y1="152" x2="225" y2="152"/><line x1="196" y1="162" x2="225" y2="162"/><line x1="196" y1="172" x2="225" y2="172"/><line x1="196" y1="182" x2="225" y2="182"/><line x1="196" y1="192" x2="225" y2="192"/><line x1="196" y1="202" x2="225" y2="202"/><line x1="196" y1="212" x2="225" y2="212"/><line x1="196" y1="222" x2="225" y2="222"/><line x1="196" y1="232" x2="225" y2="232"/><line x1="196" y1="242" x2="225" y2="242"/><line x1="196" y1="252" x2="225" y2="252"/><line x1="196" y1="262" x2="225" y2="262"/></g><rect id="bolt-head" x="170" y="90" width="83" height="26" rx="8" fill="#ffd166"/><rect x="171" y="261" width="82" height="20" rx="8" fill="#ffd166"/><path id="compression-left" d="M112 120V156m0 0-11-13m11 13 11-13" fill="none" stroke="#ff51ad" stroke-width="7" stroke-linecap="round"/><path id="compression-right" d="M308 120V156m0 0-11-13m11 13 11-13" fill="none" stroke="#ff51ad" stroke-width="7" stroke-linecap="round"/><path id="rot-arrow" d="M258 66c-18-35-74-37-95-5" stroke="#a6f27d" fill="none" stroke-width="6" stroke-linecap="round"/><path d="M163 61l1-18 16 9" stroke="#a6f27d" fill="none" stroke-width="5" stroke-linejoin="round"/><text x="210" y="325" fill="#dae7ff" text-anchor="middle" font-size="15" id="stage-name">Stage 1 / Position</text></svg></div>
-<div><span class="eyebrow" data-en="STAGE SELECTOR" data-tr="AŞAMA SEÇİCİ">STAGE SELECTOR</span><div class="actions" id="stage-buttons" style="gap:8px"><button type="button" class="btn" data-stage="0" aria-pressed="true" data-en="1 · Position" data-tr="1 · Yerleştirme">1 · Position</button><button type="button" class="btn" data-stage="1" aria-pressed="false" data-en="2 · Seat" data-tr="2 · Oturma">2 · Seat</button><button type="button" class="btn" data-stage="2" aria-pressed="false" data-en="3 · Clamp" data-tr="3 · Sıkma">3 · Clamp</button></div>
+<div>
+<svg id="tightening-svg" viewBox="0 0 420 355" role="img" aria-label="Illustration of bolt tightening stages" style="width:100%;max-height:355px">
+<defs>
+  <linearGradient id="metal" x1="0" x2="1"><stop offset="0" stop-color="#95c7e6"/><stop offset=".5" stop-color="#f2f8ff"/><stop offset="1" stop-color="#6488be"/></linearGradient>
+  <linearGradient id="tpg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1d6080"/><stop offset="1" stop-color="#0e3450"/></linearGradient>
+  <linearGradient id="bpg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3a2068"/><stop offset="1" stop-color="#1c0f3c"/></linearGradient>
+</defs>
+<!-- Top member -->
+<rect x="58" y="140" width="304" height="56" rx="7" fill="url(#tpg)" stroke="#2edbff" stroke-width="2.5"/>
+<!-- Bottom member -->
+<rect x="58" y="200" width="304" height="56" rx="7" fill="url(#bpg)" stroke="#aa81ff" stroke-width="2.5"/>
+<!-- Member labels -->
+<text x="72" y="174" font-size="10" fill="#2edbff" opacity=".7" font-weight="700" data-en="Member 1" data-tr="Parça 1">Member 1</text>
+<text x="72" y="228" font-size="10" fill="#aa81ff" opacity=".7" font-weight="700" data-en="Member 2" data-tr="Parça 2">Member 2</text>
+<!-- Bolt shaft -->
+<rect x="196" y="108" width="28" height="172" rx="4" fill="url(#metal)"/>
+<!-- Thread marks -->
+<g stroke="#6488be" stroke-width="1" opacity=".38">
+  <line x1="197" y1="118" x2="223" y2="118"/><line x1="197" y1="127" x2="223" y2="127"/><line x1="197" y1="136" x2="223" y2="136"/>
+  <line x1="197" y1="145" x2="223" y2="145"/><line x1="197" y1="154" x2="223" y2="154"/><line x1="197" y1="163" x2="223" y2="163"/>
+  <line x1="197" y1="172" x2="223" y2="172"/><line x1="197" y1="181" x2="223" y2="181"/><line x1="197" y1="190" x2="223" y2="190"/>
+  <line x1="197" y1="199" x2="223" y2="199"/><line x1="197" y1="208" x2="223" y2="208"/><line x1="197" y1="217" x2="223" y2="217"/>
+  <line x1="197" y1="226" x2="223" y2="226"/><line x1="197" y1="235" x2="223" y2="235"/><line x1="197" y1="244" x2="223" y2="244"/>
+  <line x1="197" y1="253" x2="223" y2="253"/><line x1="197" y1="262" x2="223" y2="262"/>
+</g>
+<!-- Washer top -->
+<rect x="183" y="112" width="54" height="7" rx="3" fill="#b8c8d8" stroke="#8090a8" stroke-width="1"/>
+<!-- Washer bottom -->
+<rect x="183" y="261" width="54" height="7" rx="3" fill="#b8c8d8" stroke="#8090a8" stroke-width="1"/>
+<!-- Bolt head (moves with stage) -->
+<g id="bolt-head-grp">
+  <rect id="bolt-head" x="170" y="88" width="80" height="24" rx="7" fill="#ffd166"/>
+  <line x1="178" y1="88" x2="170" y2="99" stroke="#b08830" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="242" y1="88" x2="250" y2="99" stroke="#b08830" stroke-width="1.5" stroke-linecap="round"/>
+</g>
+<!-- Nut -->
+<rect x="170" y="268" width="80" height="22" rx="7" fill="#ffd166"/>
+<line x1="178" y1="268" x2="170" y2="281" stroke="#b08830" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="242" y1="268" x2="250" y2="281" stroke="#b08830" stroke-width="1.5" stroke-linecap="round"/>
+<!-- Top compression arrows (bolt head pressing plate) -->
+<path id="compression-left" d="M104 122V152m0 0-10-14m10 14 10-14" fill="none" stroke="#ff51ad" stroke-width="6.5" stroke-linecap="round"/>
+<path id="compression-right" d="M316 122V152m0 0-10-14m10 14 10-14" fill="none" stroke="#ff51ad" stroke-width="6.5" stroke-linecap="round"/>
+<!-- Bottom compression arrows (nut reaction) -->
+<path id="comp-bot-left" d="M104 238V208m0 0-10 14m10-14 10 14" fill="none" stroke="#ff51ad" stroke-width="6.5" stroke-linecap="round"/>
+<path id="comp-bot-right" d="M316 238V208m0 0-10 14m10-14 10 14" fill="none" stroke="#ff51ad" stroke-width="6.5" stroke-linecap="round"/>
+<!-- Bolt tension indicator (lime arrows on shaft, appear at stage 3) -->
+<g id="tension-ind" opacity="0">
+  <path d="M210 172V150m0 0-7 9m7-9 7 9" fill="none" stroke="#a6f27d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M210 188V210m0 0-7-9m7 9 7-9" fill="none" stroke="#a6f27d" stroke-width="4" stroke-linecap="round"/>
+  <text x="230" y="183" font-size="11" fill="#a6f27d" font-weight="900">T</text>
+</g>
+<!-- Rotation arrow -->
+<path id="rot-arrow" d="M256 62c-16-33-72-35-88-3" stroke="#a6f27d" fill="none" stroke-width="5.5" stroke-linecap="round"/>
+<path d="M168 59l0-17 14 8" stroke="#a6f27d" fill="none" stroke-width="4" stroke-linejoin="round"/>
+<!-- Stage label -->
+<text x="210" y="342" fill="#dae7ff" text-anchor="middle" font-size="14" id="stage-name">Stage 1 / Position</text>
+</svg>
+</div>
+<div>
+<span class="eyebrow" data-en="STAGE SELECTOR" data-tr="AŞAMA SEÇİCİ">STAGE SELECTOR</span>
+<div class="actions" id="stage-buttons" style="gap:8px">
+  <button type="button" class="btn" data-stage="0" aria-pressed="true" data-en="1 · Position" data-tr="1 · Yerleştirme">1 · Position</button>
+  <button type="button" class="btn" data-stage="1" aria-pressed="false" data-en="2 · Seat" data-tr="2 · Oturma">2 · Seat</button>
+  <button type="button" class="btn" data-stage="2" aria-pressed="false" data-en="3 · Clamp" data-tr="3 · Sıkma">3 · Clamp</button>
+</div>
 <p id="stage-description" class="lead" aria-live="polite">Bolt and members are positioned before tightening.</p>
-<p class="note" data-en="Step through the stages manually; any motion is illustrative and not derived from a physics solver." data-tr="Aşamaları elle ilerletin; hareketler temsili olup fizik çözümleyicisinden elde edilmemiştir.">Step through the stages manually; any motion is illustrative and not derived from a physics solver.</p></div></div></section><section class="wrap" id="visual-lab"><span class="eyebrow" data-en="VISUAL ENGINEERING LAB" data-tr="GÖRSEL MÜHENDİSLİK LABORATUVARI">VISUAL ENGINEERING LAB</span><h2 data-en="See the physics. Understand the process." data-tr="Fiziği görün. Prosesi anlayın.">See the physics. Understand the process.</h2><p class="lead" data-en="Color-coded educational illustrations. Not measured results, certified designs, or predictions." data-tr="Renk kodlu eğitsel gösterimler. Ölçülmüş sonuç, sertifikalı tasarım veya tahmin değildir.">Color-coded educational illustrations. Not measured results, certified designs, or predictions.</p>
+<p class="note" data-en="Step through the stages manually; any motion is illustrative and not derived from a physics solver." data-tr="Aşamaları elle ilerletin; hareketler temsili olup fizik çözümleyicisinden elde edilmemiştir.">Step through the stages manually; any motion is illustrative and not derived from a physics solver.</p>
+</div>
+</div></section>
+
+<!-- VISUAL ENGINEERING LAB -->
+<section class="wrap" id="visual-lab">
+<span class="eyebrow" data-en="VISUAL ENGINEERING LAB" data-tr="GÖRSEL MÜHENDİSLİK LABORATUVARI">VISUAL ENGINEERING LAB</span>
+<h2 data-en="See the physics. Understand the process." data-tr="Fiziği görün. Prosesi anlayın.">See the physics. Understand the process.</h2>
+<p class="lead" data-en="Color-coded educational illustrations. Not measured results, certified designs, or predictions." data-tr="Renk kodlu eğitsel gösterimler. Ölçülmüş sonuç, sertifikalı tasarım veya tahmin değildir.">Color-coded educational illustrations. Not measured results, certified designs, or predictions.</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr))">
-<article class="card" style="--c:#2edbff"><small data-en="JOINT MECHANICS · SCHEMATIC" data-tr="BAĞLANTI MEKANİĞİ · ŞEMATİK">JOINT MECHANICS · SCHEMATIC</small><h3 data-en="Clamping force path" data-tr="Sıkma kuvveti yolu">Clamping force path</h3>
-<svg viewBox="0 0 320 210" role="img" aria-label="Educational clamped joint section with bolt and compression arrows" style="max-width:100%">
-<rect x="28" y="66" width="265" height="46" rx="6" fill="#225177" stroke="#5fe0ff" stroke-width="2"/><rect x="28" y="114" width="265" height="43" rx="6" fill="#3f316f" stroke="#ab87ff" stroke-width="2"/>
-<rect x="143" y="37" width="33" height="142" rx="5" fill="#d2dcf0"/><rect x="119" y="27" width="81" height="18" rx="7" fill="#ffd166"/><rect x="119" y="168" width="81" height="19" rx="6" fill="#ffd166"/>
-<path d="M65 48V93m0 0 -9 -15m9 15 9 -15M250 173v-42m0 0 -9 15m9-15 9 15" fill="none" stroke="#ff51ad" stroke-width="5" stroke-linecap="round"/>
-<text x="20" y="202" font-size="12" fill="#d8e5ff">F</text><text x="259" y="202" font-size="12" fill="#d8e5ff">F</text></svg>
-<p data-en="Bolt tension balances compression in the joint members." data-tr="Cıvatadaki çekme kuvveti, bağlanan parçalardaki basma kuvvetiyle dengelenir.">Bolt tension balances compression in the joint members.</p></article>
-<article class="card" style="--c:#ff51ad"><small data-en="VDI 2230 CONCEPT · SCHEMATIC" data-tr="VDI 2230 KAVRAMI · ŞEMATİK">VDI 2230 CONCEPT · SCHEMATIC</small><h3 data-en="Stiffness interaction" data-tr="Rijitlik etkileşimi">Stiffness interaction</h3>
-<svg viewBox="0 0 320 210" role="img" aria-label="Illustrative force deformation slopes for bolt and clamped part" style="max-width:100%">
-<path d="M35 20V178H300" stroke="#9da9ca" stroke-width="2" fill="none"/><path d="M40 178L275 33" stroke="#2edbff" stroke-width="5" fill="none"/><path d="M41 35L279 178" stroke="#ff51ad" stroke-width="5" fill="none"/><path d="M55 178H286" stroke="#586b99" stroke-dasharray="4 8"/><circle cx="157" cy="105" r="7" fill="#ffd166"/><text x="194" y="32" font-size="12" fill="#2edbff">Bolt</text><text x="194" y="195" font-size="12" fill="#ff51ad">Joint</text></svg>
-<p data-en="Conceptual force–deformation relationships; slopes are not drawn to engineering scale." data-tr="Kavramsal kuvvet–deformasyon ilişkisi; eğimler mühendislik ölçeğinde çizilmemiştir.">Conceptual force–deformation relationships; slopes are not drawn to engineering scale.</p></article>
-<article class="card" style="--c:#a6f27d"><small data-en="SPC · SYNTHETIC EXAMPLE" data-tr="SPC · SENTETİK ÖRNEK">SPC · SYNTHETIC EXAMPLE</small><h3 data-en="Process monitoring" data-tr="Proses izleme">Process monitoring</h3>
-<svg viewBox="0 0 320 210" role="img" aria-label="Synthetic statistical process control chart" style="max-width:100%">
-<path d="M27 15V185H310" fill="none" stroke="#899abf" stroke-width="2"/><rect x="29" y="51" width="274" height="96" fill="#a6f27d" opacity=".07"/><path d="M29 51H303M29 147H303" stroke="#ff8c66" stroke-width="2" stroke-dasharray="7 6"/><path d="M29 98H303" stroke="#a6f27d" stroke-width="2" stroke-dasharray="4 5"/>
-<polyline points="30,110 51,94 72,101 93,84 114,103 135,91 156,104 177,88 198,96 219,76 240,92 261,102 282,83 302,95" fill="none" stroke="#2edbff" stroke-width="3"/><g fill="#ffd166"><circle cx="93" cy="84" r="4"/><circle cx="219" cy="76" r="4"/><circle cx="282" cy="83" r="4"/></g><text x="30" y="204" font-size="12" fill="#dae8ff">Sample index →</text></svg>
-<p data-en="Synthetic observations between illustrative control limits; no statistical capability claim." data-tr="Temsili kontrol limitleri arasındaki sentetik gözlemler; istatistiksel yeterlilik iddiası değildir.">Synthetic observations between illustrative control limits; no statistical capability claim.</p></article></div></section><section class="wrap" id="verified-scope"><span class="eyebrow" data-en="VERIFIED PRODUCT SCOPE · SOURCE v3.4.0" data-tr="DOĞRULANMIŞ ÜRÜN KAPSAMI · KAYNAK v3.4.0">VERIFIED PRODUCT SCOPE · SOURCE v3.4.0</span><h2 data-en="Engineering capability, with boundaries." data-tr="Sınırları açıkça belirtilmiş mühendislik yetkinliği.">Engineering capability, with boundaries.</h2><p class="lead" data-en="The application repository documents deterministic torque recommendations and advanced VDI 2230 Blatt 1 joint calculations. The following distinctions matter in critical applications." data-tr="Uygulama deposunda deterministik tork önerileri ve gelişmiş VDI 2230 Blatt 1 bağlantı hesaplamaları açıklanmaktadır. Kritik uygulamalarda aşağıdaki ayrımlar önemlidir.">The application repository documents deterministic torque recommendations and advanced VDI 2230 Blatt 1 joint calculations. The following distinctions matter in critical applications.</p><div class="grid">
+
+<article class="card" style="--c:#2edbff">
+<small data-en="JOINT MECHANICS · SCHEMATIC" data-tr="BAĞLANTI MEKANİĞİ · ŞEMATİK">JOINT MECHANICS · SCHEMATIC</small>
+<h3 data-en="Clamping force path" data-tr="Sıkma kuvveti yolu">Clamping force path</h3>
+<svg viewBox="0 0 320 220" role="img" aria-label="Educational clamped joint cross-section showing bolt tension and member compression" style="max-width:100%;display:block;margin:10px 0">
+  <defs>
+    <linearGradient id="m1g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1d5a78"/><stop offset="1" stop-color="#0e3048"/></linearGradient>
+    <linearGradient id="m2g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#3a1f60"/><stop offset="1" stop-color="#1c1038"/></linearGradient>
+    <linearGradient id="shft" x1="0" x2="1"><stop offset="0" stop-color="#90bcd8"/><stop offset=".5" stop-color="#f0f6ff"/><stop offset="1" stop-color="#6080b0"/></linearGradient>
+  </defs>
+  <!-- Member 1 -->
+  <rect x="18" y="60" width="284" height="48" rx="6" fill="url(#m1g)" stroke="#2edbff" stroke-width="2"/>
+  <!-- Member 2 -->
+  <rect x="18" y="112" width="284" height="48" rx="6" fill="url(#m2g)" stroke="#ab87ff" stroke-width="2"/>
+  <!-- Bolt shaft -->
+  <rect x="146" y="32" width="28" height="146" rx="4" fill="url(#shft)"/>
+  <!-- Thread marks -->
+  <g stroke="#6080a8" stroke-width="1" opacity=".4">
+    <line x1="147" y1="40" x2="173" y2="40"/><line x1="147" y1="50" x2="173" y2="50"/>
+    <line x1="147" y1="60" x2="173" y2="60"/><line x1="147" y1="70" x2="173" y2="70"/>
+    <line x1="147" y1="80" x2="173" y2="80"/><line x1="147" y1="90" x2="173" y2="90"/>
+    <line x1="147" y1="100" x2="173" y2="100"/><line x1="147" y1="110" x2="173" y2="110"/>
+    <line x1="147" y1="120" x2="173" y2="120"/><line x1="147" y1="130" x2="173" y2="130"/>
+    <line x1="147" y1="140" x2="173" y2="140"/><line x1="147" y1="150" x2="173" y2="150"/>
+    <line x1="147" y1="160" x2="173" y2="160"/>
+  </g>
+  <!-- Washer top -->
+  <rect x="138" y="33" width="44" height="6" rx="2.5" fill="#b0c0d0" stroke="#8090a8" stroke-width="1"/>
+  <!-- Washer bottom -->
+  <rect x="138" y="172" width="44" height="6" rx="2.5" fill="#b0c0d0" stroke="#8090a8" stroke-width="1"/>
+  <!-- Bolt head -->
+  <rect x="126" y="20" width="68" height="16" rx="5" fill="#ffd166"/>
+  <!-- Nut -->
+  <rect x="126" y="178" width="68" height="16" rx="5" fill="#ffd166"/>
+  <!-- Clamping force arrows (down from head side) -->
+  <path d="M55 48V72m0 0-8-12m8 12 8-12" fill="none" stroke="#ff51ad" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M265 48V72m0 0-8-12m8 12 8-12" fill="none" stroke="#ff51ad" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Clamping force arrows (up from nut side) -->
+  <path d="M55 166V142m0 0-8 12m8-12 8 12" fill="none" stroke="#ff51ad" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M265 166V142m0 0-8 12m8-12 8 12" fill="none" stroke="#ff51ad" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Bolt tension arrows (outward on shaft = bolt elongation) -->
+  <path d="M160 82V58m0 0-6 9m6-9 6 9" fill="none" stroke="#a6f27d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M160 132V156m0 0-6-9m6 9 6-9" fill="none" stroke="#a6f27d" stroke-width="3" stroke-linecap="round"/>
+  <!-- Labels -->
+  <text x="30" y="46" font-size="10" fill="#ff51ad" font-weight="900">F</text>
+  <text x="30" y="172" font-size="10" fill="#ff51ad" font-weight="900">F</text>
+  <text x="176" y="74" font-size="10" fill="#a6f27d" font-weight="900">T</text>
+  <text x="176" y="144" font-size="10" fill="#a6f27d" font-weight="900">T</text>
+  <!-- Member labels -->
+  <text x="24" y="92" font-size="9" fill="#2edbff" opacity=".7">Member 1</text>
+  <text x="24" y="144" font-size="9" fill="#ab87ff" opacity=".7">Member 2</text>
+</svg>
+<p data-en="Bolt tension T balances clamping force F in the joint members. Both directions shown." data-tr="Cıvata çekme kuvveti T, bağlantı parçalarındaki sıkma kuvveti F'yi dengeler.">Bolt tension T balances clamping force F in the joint members. Both directions shown.</p>
+</article>
+
+<article class="card" style="--c:#ff51ad">
+<small data-en="VDI 2230 CONCEPT · SCHEMATIC" data-tr="VDI 2230 KAVRAMI · ŞEMATİK">VDI 2230 CONCEPT · SCHEMATIC</small>
+<h3 data-en="Stiffness interaction" data-tr="Rijitlik etkileşimi">Stiffness interaction</h3>
+<svg viewBox="0 0 320 220" role="img" aria-label="Illustrative force-deformation diagram for bolt and clamped part stiffness" style="max-width:100%;display:block;margin:10px 0">
+  <!-- Axes -->
+  <line x1="38" y1="18" x2="38" y2="185" stroke="#6272a1" stroke-width="2"/>
+  <line x1="38" y1="185" x2="305" y2="185" stroke="#6272a1" stroke-width="2"/>
+  <!-- Axis arrows -->
+  <path d="M32 26l6-8 6 8" fill="none" stroke="#6272a1" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M297 179l8 6-8 6" fill="none" stroke="#6272a1" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Axis labels -->
+  <text x="42" y="22" font-size="11" fill="#9aa8c8" font-style="italic">F</text>
+  <text x="291" y="202" font-size="11" fill="#9aa8c8" font-style="italic">δ</text>
+  <!-- Bolt stiffness line (steeper = stiffer bolt) -->
+  <path d="M43 185L278 35" stroke="#2edbff" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <!-- Joint (plate) stiffness line (shallower = more compliant) -->
+  <path d="M43 35L280 185" stroke="#ff51ad" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <!-- Preload line (horizontal dashed) -->
+  <path d="M38 109H288" stroke="#ffd166" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <!-- Operating point -->
+  <circle cx="161" cy="109" r="8" fill="#ffd166" stroke="#fff" stroke-width="2"/>
+  <!-- Bolt label -->
+  <text x="208" y="44" font-size="12" fill="#2edbff" font-weight="700" data-en="Bolt" data-tr="Cıvata">Bolt</text>
+  <!-- Joint label -->
+  <text x="208" y="198" font-size="12" fill="#ff51ad" font-weight="700" data-en="Joint" data-tr="Bağlantı">Joint</text>
+  <!-- Preload label -->
+  <text x="40" y="106" font-size="9" fill="#ffd166">F₀</text>
+  <!-- Operating point label -->
+  <text x="168" y="104" font-size="9" fill="#ffd166" font-weight="700" data-en="Op. point" data-tr="Çalışma noktası">Op. point</text>
+  <!-- Tick mark preload -->
+  <line x1="33" y1="109" x2="43" y2="109" stroke="#ffd166" stroke-width="1.5"/>
+</svg>
+<p data-en="Conceptual force–deformation relationships; slopes are not drawn to engineering scale." data-tr="Kavramsal kuvvet–deformasyon ilişkisi; eğimler mühendislik ölçeğinde çizilmemiştir.">Conceptual force–deformation relationships; slopes are not drawn to engineering scale.</p>
+</article>
+
+<article class="card" style="--c:#a6f27d">
+<small data-en="SPC · SYNTHETIC EXAMPLE" data-tr="SPC · SENTETİK ÖRNEK">SPC · SYNTHETIC EXAMPLE</small>
+<h3 data-en="Process monitoring" data-tr="Proses izleme">Process monitoring</h3>
+<svg viewBox="0 0 320 220" role="img" aria-label="Synthetic statistical process control chart with UCL, CL and LCL" style="max-width:100%;display:block;margin:10px 0">
+  <!-- Axes -->
+  <line x1="28" y1="16" x2="28" y2="188" stroke="#6272a1" stroke-width="2"/>
+  <line x1="28" y1="188" x2="308" y2="188" stroke="#6272a1" stroke-width="2"/>
+  <!-- Control region fill -->
+  <rect x="29" y="55" width="278" height="98" fill="#a6f27d" opacity=".06"/>
+  <!-- UCL -->
+  <line x1="29" y1="55" x2="307" y2="55" stroke="#ff8c66" stroke-width="1.8" stroke-dasharray="6 5"/>
+  <!-- CL -->
+  <line x1="29" y1="103" x2="307" y2="103" stroke="#a6f27d" stroke-width="1.8" stroke-dasharray="5 5"/>
+  <!-- LCL -->
+  <line x1="29" y1="153" x2="307" y2="153" stroke="#ff8c66" stroke-width="1.8" stroke-dasharray="6 5"/>
+  <!-- Data line -->
+  <polyline points="34,118 55,100 76,108 97,88 118,106 139,95 160,110 181,92 202,100 223,80 244,96 265,106 286,87 306,98" fill="none" stroke="#2edbff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Highlighted points near limits -->
+  <g fill="#ffd166"><circle cx="97" cy="88" r="5"/><circle cx="223" cy="80" r="5"/><circle cx="286" cy="87" r="5"/></g>
+  <!-- Labels -->
+  <text x="31" y="52" font-size="9" fill="#ff8c66" font-weight="700">UCL</text>
+  <text x="31" y="100" font-size="9" fill="#a6f27d" font-weight="700">CL</text>
+  <text x="31" y="151" font-size="9" fill="#ff8c66" font-weight="700">LCL</text>
+  <text x="31" y="205" font-size="10" fill="#8898b8" data-en="Sample index →" data-tr="Örnek dizini →">Sample index →</text>
+  <!-- Y axis label -->
+  <text x="2" y="110" font-size="9" fill="#8898b8" transform="rotate(-90 14 104)" data-en="Value" data-tr="Değer">Value</text>
+</svg>
+<p data-en="Synthetic observations between illustrative control limits; no statistical capability claim." data-tr="Temsili kontrol limitleri arasındaki sentetik gözlemler; istatistiksel yeterlilik iddiası değildir.">Synthetic observations between illustrative control limits; no statistical capability claim.</p>
+</article>
+</div></section>
+
+<!-- VERIFIED SCOPE -->
+<section class="wrap" id="verified-scope"><span class="eyebrow" data-en="VERIFIED PRODUCT SCOPE · SOURCE v3.4.0" data-tr="DOĞRULANMIŞ ÜRÜN KAPSAMI · KAYNAK v3.4.0">VERIFIED PRODUCT SCOPE · SOURCE v3.4.0</span><h2 data-en="Engineering capability, with boundaries." data-tr="Sınırları açıkça belirtilmiş mühendislik yetkinliği.">Engineering capability, with boundaries.</h2><p class="lead" data-en="The application repository documents deterministic torque recommendations and advanced VDI 2230 Blatt 1 joint calculations. The following distinctions matter in critical applications." data-tr="Uygulama deposunda deterministik tork önerileri ve gelişmiş VDI 2230 Blatt 1 bağlantı hesaplamaları açıklanmaktadır. Kritik uygulamalarda aşağıdaki ayrımlar önemlidir.">The application repository documents deterministic torque recommendations and advanced VDI 2230 Blatt 1 joint calculations. The following distinctions matter in critical applications.</p>
+<div class="grid">
 <article class="card" style="--c:#2edbff"><small>01 / STRESS</small><h3 data-en="Axial stress scope" data-tr="Eksenel gerilme kapsamı">Axial stress scope</h3><p data-en="Reported axial operating stress does not include tightening torsion and is not the full reduced-stress check." data-tr="Raporlanan eksenel işletme gerilmesi sıkma burulmasını içermez ve tam indirgenmiş gerilme kontrolü değildir.">Reported axial operating stress does not include tightening torsion and is not the full reduced-stress check.</p></article>
 <article class="card" style="--c:#ff51ad"><small>02 / CONTACT</small><h3 data-en="Average contact pressure" data-tr="Ortalama temas basıncı">Average contact pressure</h3><p data-en="The reported pressure is a scalar average, not a radial pressure distribution or finite-element result." data-tr="Raporlanan basınç skaler ortalama değerdir; radyal basınç dağılımı veya sonlu elemanlar sonucu değildir.">The reported pressure is a scalar average, not a radial pressure distribution or finite-element result.</p></article>
-<article class="card" style="--c:#ffd166"><small>03 / AI</small><h3 data-en="Deterministic authority" data-tr="Deterministik hesaplama esası">Deterministic authority</h3><p data-en="AI provides explanations and context. It does not change engineering calculation outputs." data-tr="AI açıklama ve bağlam desteği sağlar. Mühendislik hesaplama sonuçlarını değiştirmez.">AI provides explanations and context. It does not change engineering calculation outputs.</p></article></div><p class="caption" style="margin-top:20px" data-en="Source: TorqPro AI application README v3.4.0. Descriptions are documented scope, not independent certification." data-tr="Kaynak: TorqPro AI uygulama README v3.4.0. Açıklamalar belgelenmiş kapsamdır; bağımsız sertifikasyon değildir.">Source: TorqPro AI application README v3.4.0. Descriptions are documented scope, not independent certification.</p><a class="btn" href="https://github.com/Bursa-16/TorqPro-AI/blob/main/README.md" target="_blank" rel="noopener noreferrer" data-en="Read engineering scope ↗" data-tr="Mühendislik kapsamını incele ↗">Read engineering scope ↗</a></section><section class="wrap"><div class="warning"><span class="eyebrow" data-en="ENGINEERING RESPONSIBILITY" data-tr="MÜHENDİSLİK SORUMLULUĞU">ENGINEERING RESPONSIBILITY</span><h2 data-en="Great visuals. Rigorous decisions." data-tr="Etkileyici görseller. Titiz kararlar.">Great visuals. Rigorous decisions.</h2><p data-en="Standards are references, not claims of certification. Use the actual application and qualified engineering validation for critical joints. Marketing visuals are not substitutes for design verification." data-tr="Standartlar referanstır, sertifikasyon iddiası değildir. Kritik bağlantılar için gerçek uygulamayı ve yetkin mühendislik doğrulamasını kullanın. Tanıtım görselleri tasarım doğrulamasının yerine geçmez.">Standards are references, not claims of certification. Use the actual application and qualified engineering validation for critical joints. Marketing visuals are not substitutes for design verification.</p></div></section></main>
+<article class="card" style="--c:#ffd166"><small>03 / AI</small><h3 data-en="Deterministic authority" data-tr="Deterministik hesaplama esası">Deterministic authority</h3><p data-en="AI provides explanations and context. It does not change engineering calculation outputs." data-tr="AI açıklama ve bağlam desteği sağlar. Mühendislik hesaplama sonuçlarını değiştirmez.">AI provides explanations and context. It does not change engineering calculation outputs.</p></article>
+</div>
+<p class="caption" style="margin-top:20px" data-en="Source: TorqPro AI application README v3.4.0. Descriptions are documented scope, not independent certification." data-tr="Kaynak: TorqPro AI uygulama README v3.4.0. Açıklamalar belgelenmiş kapsamdır; bağımsız sertifikasyon değildir.">Source: TorqPro AI application README v3.4.0. Descriptions are documented scope, not independent certification.</p>
+<a class="btn" href="https://github.com/Bursa-16/TorqPro-AI/blob/main/README.md" target="_blank" rel="noopener noreferrer" data-en="Read engineering scope ↗" data-tr="Mühendislik kapsamını incele ↗">Read engineering scope ↗</a></section>
+
+<section class="wrap"><div class="warning"><span class="eyebrow" data-en="ENGINEERING RESPONSIBILITY" data-tr="MÜHENDİSLİK SORUMLULUĞU">ENGINEERING RESPONSIBILITY</span><h2 data-en="Great visuals. Rigorous decisions." data-tr="Etkileyici görseller. Titiz kararlar.">Great visuals. Rigorous decisions.</h2><p data-en="Standards are references, not claims of certification. Use the actual application and qualified engineering validation for critical joints. Marketing visuals are not substitutes for design verification." data-tr="Standartlar referanstır, sertifikasyon iddiası değildir. Kritik bağlantılar için gerçek uygulamayı ve yetkin mühendislik doğrulamasını kullanın. Tanıtım görselleri tasarım doğrulamasının yerine geçmez.">Standards are references, not claims of certification. Use the actual application and qualified engineering validation for critical joints. Marketing visuals are not substitutes for design verification.</p></div></section>
+</main>
 <footer><div class="wrap">© 2026 TorqPro AI · <a href="./index.html" data-en="Return to website" data-tr="Web sitesine dön">Return to website</a></div></footer>
 <script>
-(()=>{const q=s=>document.querySelector(s),buttons=[...document.querySelectorAll('[data-lang]')];function lang(v){if(!['tr','en'].includes(v))v='en';document.documentElement.lang=v;document.querySelectorAll('[data-en][data-tr]').forEach(e=>{if(e.tagName==='H1')e.innerHTML=e.dataset[v];else e.textContent=e.dataset[v]});document.title=v==='tr'?'Mühendislik Çözümleri | TorqPro AI':'Engineering Solutions | TorqPro AI';buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===v)));try{localStorage.setItem('torqpro-language',v)}catch(_){}}
-buttons.forEach(b=>b.addEventListener('click',()=>lang(b.dataset.lang)));let initial='en';try{initial=localStorage.getItem('torqpro-language')||'en'}catch(_){}lang(initial);
-let grid='';for(let i=0;i<=5;i++){let x=65+i*150;grid+='<line x1="'+x+'" y1="40" x2="'+x+'" y2="304" stroke="#455075" stroke-dasharray="4 7"/><text x="'+(x-10)+'" y="325">'+i*30+'</text>'}for(let i=0;i<=4;i++){let y=304-i*64;grid+='<line x1="65" y1="'+y+'" x2="815" y2="'+y+'" stroke="#455075" stroke-dasharray="4 7"/><text x="24" y="'+(y+4)+'">'+i*30+'</text>'}q('#plot-grid').innerHTML=grid;
-const torque=q('#torque'),factor=q('#factor');function update(){let t=Number(torque.value),k=Number(factor.value),f=t/(k*.012)/1000;q('#torque-val').textContent=t+' N·m';q('#factor-val').textContent=k.toFixed(2);q('#metric-torque').textContent=t+' N·m';q('#metric-preload').textContent=f.toFixed(1)+' kN';let max=150,pts=[];for(let i=0;i<=60;i++){let ti=i*max/60,fi=ti/(k*.012)/1000,x=65+ti/max*750,y=304-fi/120*256;pts.push((i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1))}q('#trace').setAttribute('d',pts.join(' '));q('#point').setAttribute('cx',65+t/max*750);q('#point').setAttribute('cy',304-f/120*256)}torque.addEventListener('input',update);factor.addEventListener('input',update);update();
-const stages=[{en:'Bolt and members are positioned before tightening.',tr:'Cıvata ve parçalar sıkma öncesinde yerleştirilir.',labelEn:'Stage 1 / Position',labelTr:'Aşama 1 / Yerleştirme',shift:0,opacity:.18},{en:'The head seats against the joint surface.',tr:'Cıvata başı bağlantı yüzeyine oturur.',labelEn:'Stage 2 / Seat',labelTr:'Aşama 2 / Oturma',shift:10,opacity:.5},{en:'Rotation develops tension in the bolt and compression in the members.',tr:'Dönme, cıvatada çekme ve parçalarda basma kuvveti oluşturur.',labelEn:'Stage 3 / Clamp',labelTr:'Aşama 3 / Sıkma',shift:22,opacity:1}];
-const desc=q('#stage-description'),head=q('#bolt-head'),left=q('#compression-left'),right=q('#compression-right'),arrow=q('#rot-arrow'),label=q('#stage-name');let selected=0;
-function showStage(i){selected=i;const a=stages[i],tr=document.documentElement.lang==='tr';head.setAttribute('transform','translate(0 '+a.shift+')');left.style.opacity=String(a.opacity);right.style.opacity=String(a.opacity);arrow.style.opacity=i===0?'.3':'1';desc.textContent=tr?a.tr:a.en;label.textContent=tr?a.labelTr:a.labelEn;document.querySelectorAll('[data-stage]').forEach((b,j)=>{const on=i===j;b.setAttribute('aria-pressed',String(on));b.classList.toggle('btn-on',on);b.style.borderColor=on?'':'#6272a1';b.style.background=on?'':'#19274a'})}
-document.querySelectorAll('[data-stage]').forEach((b,i)=>b.addEventListener('click',()=>showStage(i)));buttons.forEach(b=>b.addEventListener('click',()=>showStage(selected)));showStage(0);const menuToggle=document.querySelector('.menu-toggle');const engLinks=document.getElementById('eng-links');if(menuToggle&&engLinks){menuToggle.addEventListener('click',()=>{const open=engLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open))});engLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{engLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false')}))}})();
-</script></body></html>
+(()=>{
+const q=s=>document.querySelector(s);
+const buttons=[...document.querySelectorAll('[data-lang]')];
+
+function lang(v){
+  if(!['tr','en'].includes(v))v='en';
+  document.documentElement.lang=v;
+  document.querySelectorAll('[data-en][data-tr]').forEach(e=>{
+    if(e.tagName==='H1')e.innerHTML=e.dataset[v];
+    else e.textContent=e.dataset[v];
+  });
+  document.title=v==='tr'?'Mühendislik Çözümleri | TorqPro AI':'Engineering Solutions | TorqPro AI';
+  buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===v)));
+  try{localStorage.setItem('torqpro-language',v)}catch(_){}
+}
+buttons.forEach(b=>b.addEventListener('click',()=>lang(b.dataset.lang)));
+let initial='en';try{initial=localStorage.getItem('torqpro-language')||'en'}catch(_){}lang(initial);
+
+/* Chart */
+const plotGrid=q('#plot-grid');
+let grid='';
+for(let i=0;i<=5;i++){
+  let x=65+i*150;
+  grid+='<line x1="'+x+'" y1="40" x2="'+x+'" y2="304" stroke="#2c3d60" stroke-dasharray="4 7"/>';
+  grid+='<text x="'+(x-8)+'" y="322" font-size="11" fill="#8898b8">'+i*30+'</text>';
+}
+for(let i=0;i<=4;i++){
+  let y=304-i*64;
+  grid+='<line x1="65" y1="'+y+'" x2="815" y2="'+y+'" stroke="#2c3d60" stroke-dasharray="4 7"/>';
+  grid+='<text x="28" y="'+(y+4)+'" font-size="11" fill="#8898b8" text-anchor="end">'+i*30+'</text>';
+}
+plotGrid.innerHTML=grid;
+
+const torqueEl=q('#torque'),factorEl=q('#factor');
+function update(){
+  const t=Number(torqueEl.value),k=Number(factorEl.value),f=t/(k*.012)/1000;
+  q('#torque-val').textContent=t+' N·m';
+  q('#factor-val').textContent=k.toFixed(2);
+  q('#metric-torque').textContent=t+' N·m';
+  q('#metric-preload').textContent=f.toFixed(1)+' kN';
+  q('#k-range-note').textContent='K = '+k.toFixed(2)+' (typical range 0.12–0.30)';
+  /* Main trace */
+  const max=150;
+  let pts=[];
+  for(let i=0;i<=60;i++){
+    const ti=i*max/60,fi=ti/(k*.012)/1000,x=65+ti/max*750,y=304-fi/120*264;
+    pts.push((i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1));
+  }
+  q('#trace').setAttribute('d',pts.join(' '));
+  q('#point').setAttribute('cx',65+t/max*750);
+  q('#point').setAttribute('cy',304-f/120*264);
+  /* K-band: lines for K_min and K_max */
+  const kMin=0.12,kMax=0.30;
+  let hi='',lo='';
+  for(let i=0;i<=60;i++){
+    const ti=i*max/60,x=65+ti/max*750;
+    const fhi=ti/(kMin*.012)/1000,yhi=304-fhi/120*264;
+    const flo=ti/(kMax*.012)/1000,ylo=304-flo/120*264;
+    hi+=(i?'L':'M')+x.toFixed(1)+' '+yhi.toFixed(1);
+    lo=(i?'L':'M')+x.toFixed(1)+' '+ylo.toFixed(1)+lo;
+  }
+  q('#kband').setAttribute('d',hi+lo+'Z');
+}
+torqueEl.addEventListener('input',update);factorEl.addEventListener('input',update);update();
+
+/* Tightening stages */
+const stages=[
+  {en:'Bolt and members are positioned before tightening.',tr:'Cıvata ve parçalar sıkma öncesinde yerleştirilir.',labelEn:'Stage 1 / Position',labelTr:'Aşama 1 / Yerleştirme',shift:0,compOp:.15,tensOp:0},
+  {en:'The bolt head seats against the joint surface.',tr:'Cıvata başı bağlantı yüzeyine oturur.',labelEn:'Stage 2 / Seat',labelTr:'Aşama 2 / Oturma',shift:10,compOp:.55,tensOp:0},
+  {en:'Rotation develops tension in the bolt and compression in the members.',tr:'Dönme, cıvatada çekme ve parçalarda basma kuvveti oluşturur.',labelEn:'Stage 3 / Clamp',labelTr:'Aşama 3 / Sıkma',shift:22,compOp:1,tensOp:1}
+];
+const desc=q('#stage-description'),headGrp=q('#bolt-head-grp'),
+  cLeft=q('#compression-left'),cRight=q('#compression-right'),
+  cBotL=q('#comp-bot-left'),cBotR=q('#comp-bot-right'),
+  tensInd=q('#tension-ind'),rotArrow=q('#rot-arrow'),
+  label=q('#stage-name');
+let selected=0;
+
+function showStage(i){
+  selected=i;
+  const a=stages[i],tr=document.documentElement.lang==='tr';
+  headGrp.setAttribute('transform','translate(0 '+a.shift+')');
+  cLeft.style.opacity=String(a.compOp);
+  cRight.style.opacity=String(a.compOp);
+  cBotL.style.opacity=String(a.compOp);
+  cBotR.style.opacity=String(a.compOp);
+  tensInd.style.opacity=String(a.tensOp);
+  rotArrow.style.opacity=i===0?'.25':'1';
+  desc.textContent=tr?a.tr:a.en;
+  label.textContent=tr?a.labelTr:a.labelEn;
+  document.querySelectorAll('[data-stage]').forEach((b,j)=>{
+    const on=i===j;
+    b.setAttribute('aria-pressed',String(on));
+    b.classList.toggle('btn-on',on);
+    b.style.borderColor=on?'':'#6272a1';
+    b.style.background=on?'':'#19274a';
+  });
+}
+document.querySelectorAll('[data-stage]').forEach((b,i)=>b.addEventListener('click',()=>showStage(i)));
+buttons.forEach(b=>b.addEventListener('click',()=>showStage(selected)));
+showStage(0);
+
+/* Mobile nav */
+const menuToggle=q('.menu-toggle'),engLinks=q('#eng-links');
+if(menuToggle&&engLinks){
+  menuToggle.addEventListener('click',()=>{
+    const open=engLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',String(open));
+  });
+  engLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    engLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+  }));
+}
+})();
+</script>
+</body></html>
