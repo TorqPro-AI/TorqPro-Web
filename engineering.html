@@ -50,6 +50,7 @@ h1{font-size:clamp(42px,6.5vw,83px);letter-spacing:-.065em;line-height:1.04;marg
   <path d="M65 44V20M59 28l6-8 6 8" fill="none" stroke="#455075" stroke-width="1.5" stroke-linecap="round"/>
   <path d="M795 304H819M811 298l8 6-8 6" fill="none" stroke="#455075" stroke-width="1.5" stroke-linecap="round"/>
 </svg>
+<p id="chart-formula-bar" class="note" style="margin:4px 0 12px;font-size:12px;color:#8898b8"></p>
 <div class="sliders">
   <div><label for="torque" data-en="Applied torque" data-tr="Uygulanan tork">Applied torque</label><input id="torque" type="range" min="10" max="150" step="1" value="60"><output id="torque-val">60 N·m</output></div>
   <div><label for="factor" data-en="Illustrative nut factor K" data-tr="Temsili somun faktörü K">Illustrative nut factor K</label><input id="factor" type="range" min="0.12" max="0.30" step="0.01" value="0.20"><output id="factor-val">0.20</output></div>
@@ -327,6 +328,7 @@ function update(){
   q('#metric-torque').textContent=t+' N·m';
   q('#metric-preload').textContent=f.toFixed(1)+' kN';
   q('#k-range-note').textContent='K = '+k.toFixed(2)+' (typical range 0.12–0.30)';
+  q('#chart-formula-bar').textContent='F = T ÷ (K × d) = '+t+' N·m ÷ ('+k.toFixed(2)+' × 12 mm) = '+f.toFixed(1)+' kN';
   /* Main trace */
   const max=150;
   let pts=[];
