@@ -48,3 +48,14 @@ test('visual screenshots at desktop and mobile',async({page})=>{
   await page.screenshot({path:'test-results/engineering-'+width+'.png',fullPage:true});
  }
 });
+
+test('both contact email links remain available on mobile',async({page})=>{
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('http://127.0.0.1:43891/index.html');
+ for(const email of ['cekic.ilhan@gmail.com','sophoryx0@gmail.com']){
+  const link=page.locator('a[href^="mailto:'+email+'"]');
+  await expect(link).toHaveCount(1);
+  await expect(link).toBeVisible();
+ }
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(391);
+});
